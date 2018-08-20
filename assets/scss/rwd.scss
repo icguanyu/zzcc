@@ -35,18 +35,14 @@
   }
   .hamburgur{
     display: block;
-    padding: 35px 20px;
     transition: all .3s;
-    &:hover{
-      background: #2a6db5;
-      box-shadow: 0px 3px 0px #08284a;
-    }
   }
   .menu{
     display: none;
   }
   .quick_link{
     padding: 0px;
+    background: #144e8c;
   }
   .quick_btn{
     margin: 0;
@@ -56,8 +52,13 @@
   }
   .student_link{
     font-size: 14px;
-    padding: 26px 5px;
     border-radius: initial;
+    i{
+      line-height: 50px;
+    }
+    &:hover{
+      box-shadow: none;
+    }
   }
 }
 @media screen and (max-width: 468px) {
