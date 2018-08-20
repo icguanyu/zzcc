@@ -82,4 +82,13 @@
     font-size: 14px;
     padding: 0px 10px;
   }
+  .mobile_menu_bottom h1 {
+    font-size: 16px;
+  }
+  .mobile_menu_bottom p {
+    font-size: 12px;
+  }
+  .mobile_menu_bottom .byemail {
+    display: none;
+  }
 }
