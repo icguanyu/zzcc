@@ -309,6 +309,10 @@ header .top_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: fixed;
   top: 0;
   left: 100%;
@@ -401,14 +405,6 @@ header .top_info {
 
 .mobile_menu_bottom i {
   margin-right: 10px;
-}
-
-.mobile_menu_bottom .social {
-  padding: 10px 0;
-}
-
-.mobile_menu_bottom .social i {
-  font-size: 32px;
 }
 
 .all {
