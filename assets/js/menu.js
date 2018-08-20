@@ -35,6 +35,17 @@
     $dropdown.hide()
   }
 
+  //手機選單
+$('.hamburgur').on('click',function(e){
+  $(this).children().toggleClass('nav_open')
+  $('.nav ul').toggleClass('active')
+  e.stopPropagation()
+})
+$(document).on('click', function() {
+  $('.hamburgur').children().removeClass('nav_open')
+  $('.nav ul').removeClass('active')
+})
+
   //Listener
   $window.scroll(toggleMenu);
   $menu.mouseenter(dropDown)

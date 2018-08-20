@@ -1,4 +1,4 @@
-// 如果使用者之視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。
+// 如果使用者之視窗寬度小於1024，將會再載入這裡的 CSS。
 @media screen and (max-width: 1024px) {
   header{
     .container{
@@ -20,5 +20,43 @@
     }
   }
 
-  
+
+}
+
+@media screen and (max-width: 768px) {
+  header{
+    border: none;
+  }
+  .header_up {
+    transform: translateY(0px);
+  }
+  .hamburgur{
+    display: block;
+    padding: 35px 20px;
+    transition: all .3s;
+    &:hover{
+      background: #2a6db5;
+      box-shadow: 0px 3px 0px #08284a;
+    }
+  }
+  .menu{
+    display: none;
+  }
+  .logo{
+    padding: 0px 10px;
+  }
+  .quick_link{
+    padding: 0px;
+  }
+  .quick_btn{
+    margin: 0;
+  }
+  .teacher_link{
+    display: none;
+  }
+  .student_link{
+    font-size: 14px;
+    padding: 26px 5px;
+    border-radius: initial;
+  }
 }

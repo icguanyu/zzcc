@@ -1,5 +1,16 @@
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-
+@mixin scrollbars($size, $foreground-color, $background-color) {
+  ::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background: $background-color;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    cursor: pointer;
+  }
+}
+@include scrollbars(4px, #888, transparent);
 html,
 body {
   margin: 0;
@@ -46,21 +57,61 @@ header {
     align-items: center;
   }
 }
-
+.hamburgur {
+  cursor: pointer;
+  padding: 20px 20px;
+  display: none;
+  background: #144e8c;
+  .nav_icon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: all 0.2s ease-out;
+    width: 24px;
+    &::before,
+    &::after {
+      background: #fff;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all 0.2s ease-out;
+      width: 100%;
+    }
+    &::before {
+      top: -5px;
+    }
+    &::after {
+      top: 5px;
+    }
+  }
+  .nav_open {
+    background: transparent;
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(45deg);
+    }
+  }
+}
 .menu {
   .parent_list {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    >li {
+    > li {
       cursor: pointer;
       flex: 1;
       font-size: 18px;
       color: #666;
       padding: 30px 0px;
       text-align: center;
-      transition: all .3s;
-      &:hover{
+      transition: all 0.3s;
+      &:hover {
         box-shadow: 0px 3px 0px #0b408e;
       }
     }
@@ -69,7 +120,7 @@ header {
     display: none;
   }
 }
-  
+
 .dropdown {
   box-sizing: border-box;
   z-index: -1;
@@ -78,7 +129,7 @@ header {
   top: 100%;
   width: 100%;
   background: #e1edff;
-  ul{
+  ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -87,13 +138,13 @@ header {
     flex: 1;
     padding: 30px 10px;
     border: none;
-    transition: all .3s;
-    i{
+    transition: all 0.3s;
+    i {
       margin-right: 6px;
     }
-    &:hover{
+    &:hover {
       background: #0b408e;
-      a{
+      a {
         color: #fff;
       }
     }
