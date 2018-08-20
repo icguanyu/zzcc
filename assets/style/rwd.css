@@ -1,3 +1,9 @@
+@media screen and (min-width: 768px) {
+  .mobile_menu_open {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   header .container {
     width: 100%;
@@ -31,8 +37,8 @@
   }
   .hamburgur {
     display: block;
-    -webkit-transition: all .3s;
-    transition: all .3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
   }
   .menu {
     display: none;
@@ -66,5 +72,14 @@
   }
   .logo_mobile {
     display: block;
+  }
+  .mobile_block_list p {
+    line-height: 30px;
+    font-size: 18px;
+  }
+  .mobile_block_list .items a {
+    margin: 5px 0;
+    font-size: 14px;
+    padding: 0px 10px;
   }
 }

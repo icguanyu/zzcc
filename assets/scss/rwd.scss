@@ -1,71 +1,87 @@
+@media screen and (min-width: 768px) {
+  .mobile_menu_open {
+    display: none;
+  }
+}
 // 如果使用者之視窗寬度小於1024，將會再載入這裡的 CSS。
 @media screen and (max-width: 1024px) {
-  header{
-    .container{
+  header {
+    .container {
       width: 100%;
     }
   }
-  .three_quick_link{
+  .three_quick_link {
     display: none;
   }
-  .teacher_link{
+  .teacher_link {
     width: 80px;
     padding: 10px;
   }
-  .student_link{
+  .student_link {
     width: 110px;
     padding: 10px;
-    i{
+    i {
       font-size: 16px;
     }
   }
-
-
 }
 
 @media screen and (max-width: 768px) {
-  header{
+  header {
     border: none;
   }
-  .logo{
+  .logo {
     padding: 0 10px;
   }
   .header_up {
     transform: translateY(0px);
   }
-  .hamburgur{
+  .hamburgur {
     display: block;
-    transition: all .3s;
+    transition: all 0.3s;
   }
-  .menu{
+  .menu {
     display: none;
   }
-  .quick_link{
+  .quick_link {
     padding: 0px;
     background: #144e8c;
   }
-  .quick_btn{
+  .quick_btn {
     margin: 0;
   }
-  .teacher_link{
+  .teacher_link {
     display: none;
   }
-  .student_link{
+  .student_link {
     font-size: 14px;
     border-radius: initial;
-    i{
+    i {
       line-height: 50px;
     }
-    &:hover{
+    &:hover {
       box-shadow: none;
     }
   }
 }
 @media screen and (max-width: 468px) {
-  .logo_pc{
+  .logo_pc {
     display: none;
   }
-  .logo_mobile{
+  .logo_mobile {
     display: block;
+  }
+  .mobile_block_list {
+    p {
+      line-height: 30px;
+      font-size: 18px;
+    }
+    .items{
+      a{
+        margin: 5px 0;
+        font-size: 14px;
+        padding: 0px 10px;
+      }
+    }
   }
 }
