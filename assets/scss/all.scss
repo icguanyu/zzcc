@@ -1,0 +1,174 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  height: 2000px;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-top: 5px solid #144e8c;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  .container {
+    width: 1280px;
+    margin: 0 auto;
+  }
+  .top_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  .parent_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    >li {
+      cursor: pointer;
+      flex: 1;
+      font-size: 18px;
+      color: #666;
+      padding: 30px 0px;
+      text-align: center;
+      transition: all .3s;
+      &:hover{
+        box-shadow: 0px 3px 0px #0b408e;
+      }
+    }
+  }
+  .hide {
+    display: none;
+  }
+}
+  
+.dropdown {
+  box-sizing: border-box;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #e1edff;
+  ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  li {
+    flex: 1;
+    padding: 30px 10px;
+    border: none;
+    transition: all .3s;
+    i{
+      margin-right: 6px;
+    }
+    &:hover{
+      background: #0b408e;
+      a{
+        color: #fff;
+      }
+    }
+  }
+}
+.header_up {
+  transform: translateY(-90px);
+}
+.logo {
+  padding: 10px;
+  width: 320px;
+  text-align: center;
+  p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #666;
+  }
+  img {
+    width: 100%;
+    min-width: 240px;
+  }
+}
+.quick_link {
+  display: flex;
+  align-items: center;
+  padding: 5px 30px;
+}
+.quick_btn {
+  text-align: center;
+  margin: 0px 10px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+.teacher_link {
+  width: 120px;
+  padding: 15px 5px;
+  border: 1px solid #aaa;
+  color: #666;
+  &:hover {
+    box-shadow: 0px 3px 0px #0b408e;
+  }
+}
+.student_link {
+  width: 150px;
+  color: #fff;
+  padding: 15px 30px;
+  background: #ff9b00;
+  i {
+    margin: 0 10px;
+    font-size: 26px;
+  }
+  &:hover {
+    background: #feb646;
+    box-shadow: 0px 3px 0px #d97704;
+  }
+}
+//講師到課與聯絡
+.three_quick_link {
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+  a {
+    font-size: 14px;
+    color: #333;
+    margin: 0 15px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 2px 0px #0b408e;
+    }
+    i {
+      margin: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// 如果使用者之視窗寬度介於 768px ~ 979px，將會再載入這裡的 CSS。
+@media screen and (max-width: 1024px) {
+  header{
+    .container{
+      width: 100%;
+    }
+  }
+  .three_quick_link{
+    display: none;
+  }
+  .teacher_link{
+    width: 80px;
+    padding: 10px;
+  }
+  .student_link{
+    width: 110px;
+    padding: 10px;
+    i{
+      font-size: 16px;
+    }
+  }
+
+  
+}

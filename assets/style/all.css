@@ -1,0 +1,237 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  height: 2000px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  border-top: 5px solid #144e8c;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+header .container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+header .top_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .parent_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .parent_list > li {
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 18px;
+  color: #666;
+  padding: 30px 0px;
+  text-align: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.menu .parent_list > li:hover {
+  -webkit-box-shadow: 0px 3px 0px #0b408e;
+          box-shadow: 0px 3px 0px #0b408e;
+}
+
+.menu .hide {
+  display: none;
+}
+
+.dropdown {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #e1edff;
+}
+
+.dropdown ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.dropdown li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 30px 10px;
+  border: none;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.dropdown li i {
+  margin-right: 6px;
+}
+
+.dropdown li:hover {
+  background: #0b408e;
+}
+
+.dropdown li:hover a {
+  color: #fff;
+}
+
+.header_up {
+  -webkit-transform: translateY(-90px);
+          transform: translateY(-90px);
+}
+
+.logo {
+  padding: 10px;
+  width: 320px;
+  text-align: center;
+}
+
+.logo p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.logo img {
+  width: 100%;
+  min-width: 240px;
+}
+
+.quick_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 30px;
+}
+
+.quick_btn {
+  text-align: center;
+  margin: 0px 10px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.teacher_link {
+  width: 120px;
+  padding: 15px 5px;
+  border: 1px solid #aaa;
+  color: #666;
+}
+
+.teacher_link:hover {
+  -webkit-box-shadow: 0px 3px 0px #0b408e;
+          box-shadow: 0px 3px 0px #0b408e;
+}
+
+.student_link {
+  width: 150px;
+  color: #fff;
+  padding: 15px 30px;
+  background: #ff9b00;
+}
+
+.student_link i {
+  margin: 0 10px;
+  font-size: 26px;
+}
+
+.student_link:hover {
+  background: #feb646;
+  -webkit-box-shadow: 0px 3px 0px #d97704;
+          box-shadow: 0px 3px 0px #d97704;
+}
+
+.three_quick_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 30px;
+}
+
+.three_quick_link a {
+  font-size: 14px;
+  color: #333;
+  margin: 0 15px;
+  padding: 10px 0;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.three_quick_link a:hover {
+  -webkit-box-shadow: 0px 2px 0px #0b408e;
+          box-shadow: 0px 2px 0px #0b408e;
+}
+
+.three_quick_link a i {
+  margin: 0 5px;
+}
