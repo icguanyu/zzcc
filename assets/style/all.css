@@ -217,7 +217,11 @@ header .top_info {
 
 .logo img {
   width: 100%;
-  min-width: 240px;
+}
+
+.logo_mobile {
+  display: none;
+  max-width: 178px;
 }
 
 .quick_link {

@@ -27,6 +27,9 @@
   header{
     border: none;
   }
+  .logo{
+    padding: 0 10px;
+  }
   .header_up {
     transform: translateY(0px);
   }
@@ -42,9 +45,6 @@
   .menu{
     display: none;
   }
-  .logo{
-    padding: 0px 10px;
-  }
   .quick_link{
     padding: 0px;
   }
@@ -58,5 +58,13 @@
     font-size: 14px;
     padding: 26px 5px;
     border-radius: initial;
+  }
+}
+@media screen and (max-width: 468px) {
+  .logo_pc{
+    display: none;
+  }
+  .logo_mobile{
+    display: block;
   }
 }
