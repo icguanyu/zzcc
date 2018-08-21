@@ -16,7 +16,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans TC", sans-serif;
-  height: 2000px;
+  height: 1600px;
+  position: relative;
 }
 ul,
 li {
@@ -114,7 +115,7 @@ header {
       text-align: center;
       transition: all 0.3s;
       &:hover {
-        box-shadow: 0px 3px 0px #0b408e;
+        box-shadow: inset 0px -6px 0px #feb646;
       }
     }
   }
@@ -130,7 +131,8 @@ header {
   left: 0;
   top: 100%;
   width: 100%;
-  background: rgba(210, 228, 255, 0.86);
+  background-color: #446180;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -144,8 +146,12 @@ header {
     i {
       margin-right: 6px;
     }
+    a{
+      color: #fff;
+    }
     &:hover {
-      background: #0b408e;
+      background-color: #6082a6;
+      background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
       a {
         color: #fff;
       }
@@ -168,7 +174,7 @@ header {
     width: 100%;
   }
 }
-.logo_mobile{
+.logo_mobile {
   display: none;
   max-width: 178px;
 }
@@ -228,7 +234,8 @@ header {
     }
   }
 }
-.mobile_menu{
+.mobile_menu {
+  font-family: "Noto Sans TC", "微軟正黑體";
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -241,54 +248,56 @@ header {
   box-sizing: border-box;
   opacity: 0;
   height: 100vh;
-  background: linear-gradient(to bottom, #144e8c, #3675c3);
-  transition: all .5s; 
+  //background: linear-gradient(to bottom, #144e8c, #3675c3);\
+  background-color: #447ab2;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+  transition: all 0.5s;
 }
-.mobile_menu_open{
+.mobile_menu_open {
   display: block;
   opacity: 1;
   left: 0;
   overflow: auto;
 }
 
-.mobile_block_list{
+.mobile_block_list {
   padding: 5px 0;
   color: #fff;
-  i{
+  i {
     margin-right: 10px;
   }
-  p{
+  p {
     font-weight: 100;
     line-height: 40px;
     font-size: 18px;
   }
-  .items{
+  .items {
     display: flex;
     align-items: center;
-    flex-wrap:wrap;
-    a{
+    flex-wrap: wrap;
+    a {
       color: #fff;
       margin: 5px 0;
       padding: 5px 20px;
       border-right: 1px solid #fff;
-      &:last-child{
+      &:last-child {
         border: none;
       }
-      &:hover{
+      &:hover {
         background: #fff;
         color: #0b408e;
       }
     }
   }
 }
-.mobile_menu_bottom{
+.mobile_menu_bottom {
   color: #fff;
   width: 100%;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #fff;
-  .byemail{
+  .byemail {
     cursor: pointer;
     color: #144e8c;
     padding: 10px 15px;
@@ -298,38 +307,38 @@ header {
     margin: 10px auto;
     background: #fff;
   }
-  p{
+  p {
     letter-spacing: 2px;
   }
-  i{
+  i {
     margin-right: 10px;
   }
 }
 //====================選單樣式=====================
 //====================首頁樣式=====================
-.all{
+.all {
   width: 1280px;
   height: 1000px;
   margin: 0 auto;
   margin-top: 160px;
 }
-.topSlide{
+.topSlide {
   width: 100%;
   position: relative;
   height: 680px;
-  .slide_0{
-    background: url('../img/slide_0.jpg');
+  .slide_0 {
+    background: url("../img/slide_0.jpg");
     display: block;
   }
-  .slide_1{
-    background: url('../img/slide_1.jpg');
+  .slide_1 {
+    background: url("../img/slide_1.jpg");
     display: none;
   }
-  .slide_2{
-    background: url('../img/slide_2.jpg');
+  .slide_2 {
+    background: url("../img/slide_2.jpg");
     display: none;
   }
-  .slide{
+  .slide {
     position: absolute;
     top: 0;
     left: 0;
@@ -340,7 +349,7 @@ header {
   }
 }
 
-.emergency{
+.emergency {
   position: relative;
   width: 80%;
   height: 180px;
@@ -349,35 +358,105 @@ header {
   margin: 0 auto;
   margin-top: -120px;
   z-index: 1;
-  .contain{
+  .contain {
     width: 100%;
     height: 100%;
     border-radius: 5px;
   }
-  .emergency_news{
+  .emergency_news {
     display: flex;
     flex-direction: row;
     padding: 10px 20px;
     letter-spacing: 1px;
-    .icon_title{
+    .icon_title {
       margin-bottom: 8px;
     }
-    p{
+    p {
       display: flex;
       border-bottom: 1px solid #ddd;
-      &:last-child{
+      &:last-child {
         border: none;
       }
     }
-    i{
+    i {
       transform: rotate(-10deg);
-      margin: 0px 10px ;
+      margin-right: 10px;
     }
-    span{
+    span {
       color: #999;
       letter-spacing: 1px;
       margin-right: 10px;
     }
   }
-  
+}
+
+//====================footer樣式=====================
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .container {
+    width: 1280px;
+    margin: auto;
+  }
+}
+.backtop{    
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #446180;
+  &:after{
+    cursor: pointer;
+    content:'';
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0px 20px 20px 20px;
+    border-color: transparent transparent #fff transparent;
+  }
+}
+// .other {
+//   padding: 15px 0;
+//   letter-spacing: 1px;
+//   //background: url("../img/classroom_bg.jpg");
+//   background-size: cover;
+// }
+.copyright {
+  position: relative;
+  padding: 25px 0;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #446180;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+  .copyright_inner {
+    width: 1280px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .left{
+    flex: 1
+  }
+  .mid{
+    flex: 2;
+  }
+  .rigth {
+    flex:1;
+    text-align: center;
+    i {
+      color: #fff;
+      margin: 0px 10px;
+      font-size: 36px;
+    }
+  }
 }

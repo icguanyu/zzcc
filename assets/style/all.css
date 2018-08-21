@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
 ::-webkit-scrollbar {
   width: 4px;
@@ -15,7 +16,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans TC", sans-serif;
-  height: 2000px;
+  height: 1600px;
+  position: relative;
 }
 
 ul,
@@ -149,8 +151,8 @@ header .top_info {
 }
 
 .menu .parent_list > li:hover {
-  -webkit-box-shadow: 0px 3px 0px #0b408e;
-          box-shadow: 0px 3px 0px #0b408e;
+  -webkit-box-shadow: inset 0px -6px 0px #feb646;
+          box-shadow: inset 0px -6px 0px #feb646;
 }
 
 .menu .hide {
@@ -165,7 +167,8 @@ header .top_info {
   left: 0;
   top: 100%;
   width: 100%;
-  background: rgba(210, 228, 255, 0.86);
+  background-color: #446180;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
 }
 
 .dropdown ul {
@@ -192,8 +195,13 @@ header .top_info {
   margin-right: 6px;
 }
 
+.dropdown li a {
+  color: #fff;
+}
+
 .dropdown li:hover {
-  background: #0b408e;
+  background-color: #6082a6;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
 }
 
 .dropdown li:hover a {
@@ -306,6 +314,7 @@ header .top_info {
 }
 
 .mobile_menu {
+  font-family: "Noto Sans TC", "微軟正黑體";
   z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -324,10 +333,10 @@ header .top_info {
           box-sizing: border-box;
   opacity: 0;
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(#144e8c), to(#3675c3));
-  background: linear-gradient(to bottom, #144e8c, #3675c3);
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  background-color: #447ab2;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .mobile_menu_open {
@@ -493,11 +502,96 @@ header .top_info {
 .emergency .emergency_news i {
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
-  margin: 0px 10px;
+  margin-right: 10px;
 }
 
 .emergency .emergency_news span {
   color: #999;
   letter-spacing: 1px;
   margin-right: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer .container {
+  width: 1280px;
+  margin: auto;
+}
+
+.backtop {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #446180;
+}
+
+.backtop:after {
+  cursor: pointer;
+  content: '';
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 20px 20px 20px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.copyright {
+  position: relative;
+  padding: 25px 0;
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1px;
+  background-color: #446180;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+}
+
+.copyright .copyright_inner {
+  width: 1280px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.copyright .left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.copyright .mid {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.copyright .rigth {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+}
+
+.copyright .rigth i {
+  color: #fff;
+  margin: 0px 10px;
+  font-size: 36px;
 }

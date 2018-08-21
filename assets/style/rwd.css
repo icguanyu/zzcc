@@ -30,7 +30,7 @@
   }
   .icon_title {
     border-bottom: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px 0;
   }
   .emergency .emergency_news {
     display: block;
@@ -46,6 +46,13 @@
   }
   .emergency .emergency_news span {
     display: block;
+  }
+  footer .copyright {
+    padding: 15px 20px;
+  }
+  footer .copyright .copyright_inner {
+    font-size: 12px;
+    width: 100%;
   }
 }
 
@@ -121,5 +128,21 @@
   }
   .topSlide {
     height: 300px;
+  }
+  footer .copyright .copyright_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  footer .copyright .copyright_inner div {
+    margin: 5px 0;
+  }
+  footer .copyright .copyright_inner i {
+    font-size: 24px;
+  }
+  footer .backtop {
+    display: none;
   }
 }

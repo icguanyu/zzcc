@@ -32,7 +32,7 @@
   }
   .icon_title{
     border-bottom: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px 0;
   }
   .emergency .emergency_news{
     display: block;
@@ -44,6 +44,15 @@
     }
     span{
       display: block;
+    }
+  }
+  footer{
+    .copyright{
+      padding: 15px 20px;
+    }
+    .copyright .copyright_inner{
+      font-size: 12px;
+      width: 100%;
     }
   }
 }
@@ -123,4 +132,20 @@
   .topSlide{
     height: 300px;
   }
+  footer{
+    .copyright .copyright_inner{
+      flex-direction: column;
+      text-align: center;
+      div{
+        margin: 5px 0;
+      }
+      i{
+        font-size: 24px;
+      }
+    }
+    .backtop{
+      display: none;
+    }
+  }
+
 }
