@@ -24,6 +24,28 @@
       font-size: 16px;
     }
   }
+  .all{
+    width: 100%;
+  }
+  .topSlide{
+    height: 468px;
+  }
+  .icon_title{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  .emergency .emergency_news{
+    display: block;
+    margin: 0 15px;
+    padding: 0;
+    flex-direction: column;
+    p{
+      display: block;
+    }
+    span{
+      display: block;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -63,6 +85,9 @@
       box-shadow: none;
     }
   }
+  .all{
+    margin-top: 70px ;
+  }
 }
 @media screen and (max-width: 468px) {
   .logo_pc {
@@ -94,5 +119,8 @@
     .byemail{
       display: none;
     }
+  }
+  .topSlide{
+    height: 300px;
   }
 }

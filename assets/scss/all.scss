@@ -10,7 +10,7 @@
     cursor: pointer;
   }
 }
-@include scrollbars(4px, #888, transparent);
+@include scrollbars(4px, #888, #fff);
 html,
 body {
   margin: 0;
@@ -39,11 +39,11 @@ li {
   padding: 0;
   margin: 0;
 }
-
+//====================選單樣式=====================
 header {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 100;
   width: 100%;
   border-top: 5px solid #144e8c;
   background: #fff;
@@ -130,7 +130,7 @@ header {
   left: 0;
   top: 100%;
   width: 100%;
-  background: #e1edff;
+  background: rgba(210, 228, 255, 0.86);
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -229,6 +229,7 @@ header {
   }
 }
 .mobile_menu{
+  z-index: 100;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -304,6 +305,79 @@ header {
     margin-right: 10px;
   }
 }
+//====================選單樣式=====================
+//====================首頁樣式=====================
 .all{
-  margin-top: 80px;
+  width: 1280px;
+  height: 1000px;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+.topSlide{
+  width: 100%;
+  position: relative;
+  height: 680px;
+  .slide_0{
+    background: url('../img/slide_0.jpg');
+    display: block;
+  }
+  .slide_1{
+    background: url('../img/slide_1.jpg');
+    display: none;
+  }
+  .slide_2{
+    background: url('../img/slide_2.jpg');
+    display: none;
+  }
+  .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center 60%;
+  }
+}
+
+.emergency{
+  position: relative;
+  width: 80%;
+  height: 180px;
+  border-radius: 5px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: -120px;
+  z-index: 1;
+  .contain{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .emergency_news{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    .icon_title{
+      margin-bottom: 8px;
+    }
+    p{
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      &:last-child{
+        border: none;
+      }
+    }
+    i{
+      transform: rotate(-10deg);
+      margin: 0px 10px ;
+    }
+    span{
+      color: #999;
+      letter-spacing: 1px;
+      margin-right: 10px;
+    }
+  }
+  
 }
