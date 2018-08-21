@@ -2,6 +2,7 @@
   const $window = $(window);
   const $document = $(document);
   const $header = $('header');
+  const $footer = $('footer')
   const $m_menu = $('.mobile_menu');
   const menu_templete = `
     <div class="container">
@@ -141,12 +142,30 @@
       <p><i class="fas fa-map-marker-alt"></i>100臺北市中正區濟南路一段六號</p>
     </div>
   `
-
+  const footer_templete = `
+    <div class="copyright">
+      <div class="copyright_inner">
+        <div class="left">
+          <p>100‧臺北市中正區濟南路一段六號</p>
+          <p>TEL 02-2327-8441　FAX 02-2341-0945</p>
+        </div>
+        <div class="mid">
+          <p>內容版權屬於相關著作權所有人，未經正式書面授權禁止轉貼節錄</p>
+          <p>(C) Copyright 臺北市中正社區大學 all Rights reserved.</p>
+        </div>
+        <div class="rigth">
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fas fa-map-marked-alt"></i></a>
+        </div>
+      </div>
+    </div>
+  `
   function SetMenu(){
     //載入PC/手機
     $header.append(menu_templete)
     $m_menu.append(mobile_menu_templete)
-    
+    $footer.append(footer_templete)
     //定義選單內DOM
     const $hamburgur = $(".hamburgur");
     const $topinfo = $('.top_info');

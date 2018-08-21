@@ -34,7 +34,7 @@
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
   }
-  .emergency .emergency_news{
+  .hot .hot_news{
     display: block;
     margin: 0 15px;
     padding: 0;
@@ -97,6 +97,12 @@
   .all{
     margin-top: 70px ;
   }
+  .hot{
+    .news_item{
+      padding: 5px 0;
+      font-size: 14px;
+    }
+  }
 }
 @media screen and (max-width: 468px) {
   .logo_pc {
@@ -117,6 +123,19 @@
         padding: 0px 10px;
       }
     }
+  }
+  .hot{
+    width: 85%;
+    box-shadow: 5px 5px 0px #ddd;
+    .news_item{
+      flex-direction: column;
+      margin: 15px 0;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+  }
+  .hot .news_item .categories .class{
+    font-size: 12px;
   }
   .mobile_menu_bottom{
     h1{
