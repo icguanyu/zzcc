@@ -471,7 +471,7 @@ header .top_info {
   border-radius: 2px;
   background: #fff;
   margin: 0 auto;
-  margin-top: -100px;
+  margin-top: -80px;
   -webkit-box-shadow: 5px 5px 0px rgba(214, 214, 214, 0.45);
           box-shadow: 5px 5px 0px rgba(214, 214, 214, 0.45);
   z-index: 1;
@@ -536,7 +536,6 @@ header .top_info {
   font-size: 14px;
   padding: 0 5px;
   border-radius: 3px;
-  font-weight: 100;
   margin: 0 10px;
   white-space: nowrap;
 }
