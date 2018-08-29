@@ -118,10 +118,11 @@
   .zzcc_news .block {
     width: 330px;
   }
-  .show_all_news {
-    position: relative;
+  .news_title p {
     font-size: 12px;
-    padding: 3px 5px;
+  }
+  .show_all_news {
+    display: none;
   }
 }
 
@@ -175,9 +176,6 @@
   }
   .zzcc_news {
     width: 90%;
-  }
-  .zzcc_news .news_title p {
-    font-size: 12px;
   }
   .zzcc_news .news_list {
     margin-top: 0;
