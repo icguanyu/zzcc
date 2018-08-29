@@ -2,91 +2,92 @@
   const $window = $(window);
   const $document = $(document);
   const $header = $('header');
-  const $footer = $('footer')
+  const $top_menu = $('.menu');
+  const $footer = $('footer');
   const $m_menu = $('.mobile_menu');
-  const menu_templete = `
-    <div class="container">
-      <div class="top_info">
-        <div class="logo">
-          <!-- <p>台北市私立開南高級商工職業學校承辦</p> -->
-          <img class="logo_pc" src="assets/img/logo.png" alt="">
-          <img class="logo_mobile" src="assets/img/logo_mobile.png" alt="">
-        </div>
-        <div class="quick_link">
-          <div class="three_quick_link">
-            <a href="#"><i class="fas fa-caret-right"></i>講師到課查詢</a>
-            <a href="#"><i class="fas fa-caret-right"></i>學員到課查詢</a>
-            <a href="#"><i class="fas fa-caret-right"></i>開南商工</a>
-          </div>
-          <a href="#" class="quick_btn teacher_link">講師投課</a>
-          <a href="#" class="quick_btn student_link"><i class="fas fa-book-reader"></i>課程一覽</a>
-          <div class="hamburgur">
-            <div class="nav_icon"></div>
-          </div>
-        </div>
+  const header_templete = `
+  <div class="container">
+    <div class="top_info">
+      <div class="logo">
+        <!-- <p>台北市私立開南高級商工職業學校承辦</p> -->
+        <img class="logo_pc" src="assets/img/logo.png" alt="">
+        <img class="logo_mobile" src="assets/img/logo_mobile.png" alt="">
       </div>
-      <div class="menu">
-        <ul class="parent_list">
-          <li>
-            <a href="javascript:;">課務專區</a>
-            <div class="dropdown">
-              <ul class="child_list">
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>最新課程一覽</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>如何報名</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>報名表下載</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="javascript:;">校務行政</a>
-            <div class="dropdown">
-              <ul class="child_list">
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>行事曆</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>講師週報</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>學員週報</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>課程異動申請</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>表單下載</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="javascript:;">學員專屬</a>
-            <div class="dropdown">
-              <ul class="child_list">
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>研習證明申請</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>榮譽榜</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>學習收藏</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="javascript:;">多元主題</a>
-            <div class="dropdown">
-              <ul class="child_list">
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>專案課程</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>社區營造</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>踅中正</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>公民素養週</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>成果展回顧</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <a href="javascript:;">社大介紹</a>
-            <div class="dropdown">
-              <ul class="child_list">
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>關於社大</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>校園環境</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>聯絡方式</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>社大Q&A</a></li>
-                <li><a href="javascript:;"><i class="fas fa-caret-right"></i>團保內容</a></li>
-              </ul>
-            </div>
-          </li>
-          <a href="#" id="stu_quick_btn" class="quick_btn student_link"><i class="fas fa-book-reader"></i>課程一覽</a>
-        </ul>
+      <div class="quick_link">
+        <div class="three_quick_link">
+          <a href="#"><i class="fas fa-caret-right"></i>講師到課查詢</a>
+          <a href="#"><i class="fas fa-caret-right"></i>學員到課查詢</a>
+          <a href="#"><i class="fas fa-caret-right"></i>開南商工</a>
+        </div>
+        <a href="#" class="quick_btn teacher_link">講師投課</a>
+        <a href="#" class="quick_btn student_link"><i class="fas fa-book-reader"></i>課程一覽</a>
+        <div class="hamburgur">
+          <div class="nav_icon"></div>
+        </div>
       </div>
     </div>
+  </div>
+  `
+  const menu_templete = `
+  <ul class="parent_list">
+    <li>
+      <a href="javascript:;">課務專區</a>
+      <div class="dropdown">
+        <ul class="child_list">
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>最新課程一覽</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>如何報名</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>報名表下載</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:;">校務行政</a>
+      <div class="dropdown">
+        <ul class="child_list">
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>行事曆</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>講師週報</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>學員週報</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>課程異動申請</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>表單下載</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:;">學員專屬</a>
+      <div class="dropdown">
+        <ul class="child_list">
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>研習證明申請</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>榮譽榜</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>學習收藏</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:;">多元主題</a>
+      <div class="dropdown">
+        <ul class="child_list">
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>專案課程</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>社區營造</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>踅中正</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>公民素養週</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>成果展回顧</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <a href="javascript:;">社大介紹</a>
+      <div class="dropdown">
+        <ul class="child_list">
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>關於社大</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>校園環境</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>聯絡方式</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>社大Q&A</a></li>
+          <li><a href="javascript:;"><i class="fas fa-caret-right"></i>團保內容</a></li>
+        </ul>
+      </div>
+    </li>
+    <a href="#" id="stu_quick_btn" class="quick_btn student_link"><i class="fas fa-book-reader"></i>課程一覽</a>
+  </ul>
   `
   const mobile_menu_templete = `
     <div class="mobile_block_list">
@@ -163,7 +164,8 @@
   `
   function SetMenu(){
     //載入PC/手機
-    $header.append(menu_templete)
+    $header.append(header_templete)
+    $top_menu.append(menu_templete)
     $m_menu.append(mobile_menu_templete)
     $footer.append(footer_templete)
     //定義選單內DOM
@@ -195,10 +197,10 @@
       timer = setTimeout(function() {
         let scrollY = $(this).scrollTop();
         if (scrollY > $topinfo.height()) {
-          $header.addClass("header_up");
+          //$header.addClass("header_up");
           $stu_quick_btn.fadeIn();
         } else {
-          $header.removeClass("header_up");
+          //$header.removeClass("header_up");
           $stu_quick_btn.hide();
         }
       }, 100);

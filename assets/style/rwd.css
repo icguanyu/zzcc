@@ -22,6 +22,9 @@
   .student_link i {
     font-size: 16px;
   }
+  .menu .parent_list {
+    width: 100%;
+  }
   .all {
     width: 100%;
   }
@@ -34,8 +37,8 @@
   }
   .hot .hot_news {
     display: block;
-    margin: 0 15px;
-    padding: 0;
+    margin: 0 5px;
+    padding-bottom: 10px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -46,6 +49,14 @@
   }
   .hot .hot_news span {
     display: block;
+  }
+  .zzcc_news {
+    width: 95%;
+    margin: auto;
+  }
+  .other_news {
+    width: 95%;
+    margin: auto;
   }
   footer .copyright {
     padding: 15px 20px;
@@ -59,6 +70,10 @@
 @media screen and (max-width: 768px) {
   header {
     border: none;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
   }
   .logo {
     padding: 0 10px;
@@ -96,16 +111,24 @@
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .all {
-    margin-top: 70px;
-  }
   .hot .news_item {
     padding: 5px 0;
     font-size: 14px;
   }
+  .zzcc_news .block {
+    width: 330px;
+  }
+  .show_all_news {
+    position: relative;
+    font-size: 12px;
+    padding: 3px 5px;
+  }
 }
 
 @media screen and (max-width: 468px) {
+  .logo {
+    width: 140px;
+  }
   .logo_pc {
     display: none;
   }
@@ -131,8 +154,8 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 15px 0;
-    padding-bottom: 15px;
+    margin: 10px 0;
+    padding-bottom: 10px;
     border-bottom: 1px solid #eee;
   }
   .hot .news_item .categories .class {
@@ -149,6 +172,38 @@
   }
   .topSlide {
     height: 300px;
+  }
+  .zzcc_news {
+    width: 90%;
+  }
+  .zzcc_news .news_title p {
+    font-size: 12px;
+  }
+  .zzcc_news .news_list {
+    margin-top: 0;
+    padding: 10px;
+  }
+  .zzcc_news .news_box {
+    overflow: auto;
+    height: auto;
+    padding: 0;
+  }
+  .zzcc_news .navigate {
+    display: none;
+  }
+  .zzcc_news .block {
+    width: 280px;
+  }
+  .other_news li {
+    display: block;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .other_news li .info {
+    text-align: left;
+  }
+  .other_news li .info .class {
+    display: none;
   }
   footer .copyright .copyright_inner {
     -webkit-box-orient: vertical;
