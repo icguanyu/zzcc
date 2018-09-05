@@ -2,6 +2,7 @@ var app = new Vue({
   el: '.all',
   data: {
     data :[],
+    filter: 'all',
     storageArray: []
   },
   created() {
@@ -27,6 +28,13 @@ var app = new Vue({
       const vm = this
       const setkinds = new Set(vm.data.map((item)=>item.kinds_1))
       return [...setkinds]
+    },
+    filterClass(){
+      const vm = this
+      const result = vm.data.filter((item)=>{
+        return vm.filter==='all'?item:item.kinds_1 === vm.filter
+      })
+      return result
     }
   }
 })

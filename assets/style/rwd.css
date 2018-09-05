@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media screen and (min-width: 768px) {
   .mobile_menu_open {
     display: none;
@@ -65,6 +66,46 @@
     font-size: 12px;
     width: 100%;
   }
+  /*class*/
+  .class_title .contain {
+    width: 100%;
+    padding: 0px 30px;
+  }
+  .search_tools .tool {
+    padding: 5px 0;
+  }
+  .search_tools .tool div {
+    margin: 0px 15px;
+  }
+  .search_tools .tool select {
+    width: 120px;
+  }
+  .search_tools .tool label {
+    padding: 3px 15px;
+    font-size: 16px;
+  }
+  .search_tools .tool .for_kinds select {
+    width: 160px;
+    height: 30px;
+  }
+  .search_tools .tool .for_kinds option {
+    font-size: 16px;
+  }
+  .search_tools .tool .for_kinds label {
+    width: 25px;
+    height: 30px;
+    padding: 0px;
+  }
+  .search_tools .tool .for_kinds label::before {
+    border: 12px solid #eff3f6;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  .search_result table {
+    width: 100%;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -122,6 +163,141 @@
     font-size: 12px;
   }
   .show_all_news {
+    display: none;
+  }
+  /*class課程總覽*/
+  .class_title {
+    padding: 10px 0;
+  }
+  .class_title h1 {
+    font-size: 18px;
+  }
+  .keywordsearch {
+    display: none;
+  }
+  .search_tools {
+    padding: 5px 20px;
+  }
+  .search_tools .remind {
+    display: none;
+  }
+  .search_tools .tool {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search_tools .tool select {
+    font-size: 14px;
+  }
+  .search_tools .tool label {
+    font-size: 14px;
+    margin: 5px 0px;
+    padding: 3px 5px;
+    display: inline-block;
+  }
+  .search_tools .tool .kind_title {
+    padding-bottom: 10px;
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .search_tools .tool .for_kinds {
+    padding-bottom: 3px;
+  }
+  .search_tools .tool .for_kinds select {
+    width: 100%;
+  }
+  .search_tools .tool .for_kinds option {
+    font-size: 14px;
+  }
+  .search_tools .tool .for_kinds label {
+    margin: 0;
+  }
+  .search_tools .search_hr {
+    margin: 0px 0px 30px 0px;
+  }
+  .search_tools .search_hr p {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .search_result table {
+    background: none;
+  }
+  .search_result table thead {
+    display: none;
+  }
+  .search_result table td {
+    padding: 0;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  .search_result table tr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+  }
+  .search_result table tr:hover {
+    background: none;
+  }
+  .search_result table .id {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 20%;
+    background: #eee;
+  }
+  .search_result table .class_name {
+    width: 60%;
+    display: block;
+    text-align: left;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    background: #eee;
+  }
+  .search_result table .icon {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 20%;
+    background: #eee;
+  }
+  .search_result table .week {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 20%;
+    font-size: 12px;
+  }
+  .search_result table .period {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    width: 60%;
+    font-size: 12px;
+    text-align: left;
+  }
+  .search_result table .teacher {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    width: 20%;
+    font-size: 12px;
+  }
+  .search_result table .fee {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
     display: none;
   }
 }

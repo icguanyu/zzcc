@@ -702,7 +702,7 @@ footer {
     .keywordsearch {
       position: absolute;
       bottom: 0;
-      right: 0;
+      right: 30px;
       input {
         outline: none;
         height: 25px;
@@ -746,6 +746,7 @@ footer {
   .for_kinds {
     position: relative;
     select {
+      font-size: 18px;
       outline: none;
       width: 200px;
       height: 40px;
@@ -764,10 +765,10 @@ footer {
       width: 40px;
       height: 40px;
       background: #0b408e;
-      top: 47px;
-      left: 160px;
+      right: 0;
       pointer-events: none;
       border-radius: 3px;
+      z-index: 1;
       &:before {
         display: block;
         border: 20px solid #eff3f6;
@@ -815,6 +816,7 @@ footer {
   }
 }
 .search_result{
+  padding-bottom: 40px;
   table{
     background: #efefef;
     width: 100%;
@@ -828,17 +830,24 @@ footer {
       color: #fff;
       font-weight: normal;
     }
-    tr{
-      height: 60px;
-    }
     tr:nth-child(even) {
       background: #fff;
+    }
+    tr{
+      height: 60px;
+      transition: all .2s;
+      &:hover{
+        background: #d1e6fd;
+      }
     }
     td{
       padding: 0px 10px;
       i{
         cursor: pointer;
       }
+    }
+    .class_name{
+      cursor: pointer;
     }
   }
 }

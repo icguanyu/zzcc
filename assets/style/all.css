@@ -911,7 +911,7 @@ footer .container {
 .class_title .contain .keywordsearch {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 30px;
 }
 
 .class_title .contain .keywordsearch input {
@@ -979,6 +979,7 @@ footer .container {
 }
 
 .search_tools .for_kinds select {
+  font-size: 18px;
   outline: none;
   width: 200px;
   height: 40px;
@@ -1000,10 +1001,10 @@ footer .container {
   width: 40px;
   height: 40px;
   background: #0b408e;
-  top: 47px;
-  left: 160px;
+  right: 0;
   pointer-events: none;
   border-radius: 3px;
+  z-index: 1;
 }
 
 .search_tools .for_kinds label:before {
@@ -1052,6 +1053,10 @@ footer .container {
   border: .5px solid #ccc;
 }
 
+.search_result {
+  padding-bottom: 40px;
+}
+
 .search_result table {
   background: #efefef;
   width: 100%;
@@ -1068,12 +1073,18 @@ footer .container {
   font-weight: normal;
 }
 
-.search_result table tr {
-  height: 60px;
-}
-
 .search_result table tr:nth-child(even) {
   background: #fff;
+}
+
+.search_result table tr {
+  height: 60px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.search_result table tr:hover {
+  background: #d1e6fd;
 }
 
 .search_result table td {
@@ -1081,5 +1092,9 @@ footer .container {
 }
 
 .search_result table td i {
+  cursor: pointer;
+}
+
+.search_result table .class_name {
   cursor: pointer;
 }

@@ -68,6 +68,54 @@
       width: 100%;
     }
   }
+  /*class*/
+  .class_title {
+    .contain {
+      width: 100%;
+      padding: 0px 30px;
+    }
+  }
+  .search_tools {
+    .tool {
+      padding: 5px 0;
+      div {
+        margin: 0px 15px;
+      }
+      select {
+        width: 120px;
+      }
+      label {
+        padding: 3px 15px;
+        font-size: 16px;
+      }
+      .for_kinds {
+        select {
+          width: 160px;
+          height: 30px;
+        }
+        option{
+          font-size: 16px;
+        }
+        label {
+          width: 25px;
+          height: 30px;
+          padding: 0px;
+          &::before {
+            border: 12px solid #eff3f6;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .search_result{
+    table{
+      width: 100%;
+      font-size: 16px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -126,15 +174,131 @@
       font-size: 12px;
     }
   }
-  .show_all_news{
+  .show_all_news {
     display: none;
     // position: relative;
     // font-size: 12px;
     // padding: 3px 5px;
   }
+  /*class課程總覽*/
+  .class_title{
+    padding: 10px 0;
+    h1{
+      font-size: 18px;
+    }
+  }
+  .keywordsearch{
+    display: none;
+  }
+  .search_tools {
+    padding: 5px 20px;
+    .remind{
+      display: none;
+    }
+    .tool {
+      flex-direction: column;
+      select {
+        font-size: 14px;
+      }
+      label {
+        font-size: 14px;
+        margin: 5px 0px;
+        padding: 3px 5px;
+        display: inline-block;
+      }
+      .kind_title{
+        padding-bottom: 10px;
+        font-size: 16px;
+        padding-bottom: 5px;
+      }
+      .for_kinds {
+        padding-bottom: 3px;
+        select {
+          width: 100%;
+        }
+        option{
+          font-size: 14px;
+        }
+        label {
+          margin: 0;
+        }
+      }
+    }
+    .search_hr{
+      margin: 0px 0px 30px 0px;
+      p{
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+  .search_result{
+    table{
+      background: none;
+      thead{
+        display: none;
+      }
+      td{
+        padding: 0;
+        font-size: 16px;
+        padding: 5px 0;
+      }
+      tr{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+        &:hover{
+          background: none;
+        }
+      }
+      .id{
+        order: 0;
+        width: 20%;
+        background: #eee;
+      }
+      .class_name{
+        width: 60%;
+        display: block;
+        text-align: left;
+        order: 1;
+        background: #eee;
+      }
+      
+      .icon{
+        order: 2;
+        width: 20%;
+        background: #eee;
+      }
+      .week{
+        order: 3;
+        width: 20%;
+        font-size: 12px;
+      }
+      .period{
+        order: 4;
+        width: 60%;
+        font-size: 12px;
+        text-align: left;
+      }
+      .teacher{
+        order: 5;
+        width: 20%;
+        font-size: 12px;
+      }
+      .fee{
+        order: 0;
+        display: none;
+      }
+    }
+  }
+
 }
 @media screen and (max-width: 468px) {
-  .logo{
+  .logo {
     width: 140px;
   }
   .logo_pc {
