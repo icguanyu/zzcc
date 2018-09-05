@@ -11,7 +11,7 @@ var app = new Vue({
   methods:{
     getData(){
       const vm = this
-      const apiUrl ='../../class/data/data.json'  
+      const apiUrl ='assets/js/data.json'  
       $.get(apiUrl).then(res=>{
         if(res){
           res.forEach(item=>item['star'] = false)//加星星

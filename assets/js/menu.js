@@ -10,8 +10,8 @@
     <div class="top_info">
       <div class="logo">
         <!-- <p>台北市私立開南高級商工職業學校承辦</p> -->
-        <img class="logo_pc" src="../assets/img/logo.png" alt="">
-        <img class="logo_mobile" src="../assets/img/logo_mobile.png" alt="">
+        <img class="logo_pc" src="assets/img/logo.png" alt="">
+        <img class="logo_mobile" src="assets/img/logo_mobile.png" alt="">
       </div>
       <div class="quick_link">
         <div class="three_quick_link">
@@ -20,7 +20,7 @@
           <a href="#"><i class="fas fa-caret-right"></i>開南商工</a>
         </div>
         <a href="#" class="quick_btn teacher_link">講師投課</a>
-        <a href="../class/class.html" class="quick_btn student_link"><i class="fas fa-book-reader"></i>課程一覽</a>
+        <a href="class.html" class="quick_btn student_link"><i class="fas fa-book-reader"></i>課程一覽</a>
         <div class="hamburgur">
           <div class="nav_icon"></div>
         </div>
@@ -86,7 +86,7 @@
         </ul>
       </div>
     </li>
-    <a href="../class/class.html" class="student_link menu_stu_quick_btn"><i class="fas fa-book-reader"></i>課程一覽</a>
+    <a href="class.html" class="student_link menu_stu_quick_btn"><i class="fas fa-book-reader"></i>課程一覽</a>
   </ul>
   `
   const mobile_menu_templete = `
