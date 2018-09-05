@@ -46,6 +46,10 @@ li {
   margin: 0;
 }
 
+select, option {
+  font-family: "Noto Sans TC";
+}
+
 header {
   position: relative;
   width: 100%;
@@ -139,6 +143,7 @@ header .top_info {
 .menu .parent_list {
   width: 1280px;
   margin: auto;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -165,6 +170,34 @@ header .top_info {
 .menu .parent_list > li:hover {
   -webkit-box-shadow: inset 0px -6px 0px #feb646;
           box-shadow: inset 0px -6px 0px #feb646;
+}
+
+.menu .parent_list .menu_stu_quick_btn {
+  padding: 0px;
+  background: #ff9b00;
+  text-align: center;
+  margin: 0px;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  font-size: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.menu .parent_list .show {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: initial;
+  margin: 0px 10px;
+  padding: 10px 15px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .menu .hide {
@@ -431,6 +464,7 @@ header .top_info {
 
 .all {
   width: 1280px;
+  min-height: 100vh;
   margin: auto;
 }
 
@@ -591,7 +625,8 @@ header .top_info {
   margin: auto;
 }
 
-.zzcc_news .navigate .prev, .zzcc_news .navigate .next {
+.zzcc_news .navigate .prev,
+.zzcc_news .navigate .next {
   cursor: pointer;
   background: rgba(255, 255, 255, 0.7);
   width: 50px;
@@ -602,7 +637,8 @@ header .top_info {
           box-shadow: 0px 1px 2px #333;
 }
 
-.zzcc_news .navigate .prev i, .zzcc_news .navigate .next i {
+.zzcc_news .navigate .prev i,
+.zzcc_news .navigate .next i {
   font-size: 24px;
   line-height: 50px;
 }
@@ -652,8 +688,8 @@ header .top_info {
 .zzcc_news .block img {
   width: 100%;
   height: 100%;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .zzcc_news .block .imgbox {
@@ -855,4 +891,195 @@ footer .container {
   color: #fff;
   margin: 0px 10px;
   font-size: 36px;
+}
+
+.class_title {
+  width: 100%;
+  padding: 20px 0px;
+  color: #fff;
+  background-color: #5f96e8;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+}
+
+.class_title .contain {
+  padding: 0;
+  width: 1280px;
+  margin: auto;
+  position: relative;
+}
+
+.class_title .contain .keywordsearch {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.class_title .contain .keywordsearch input {
+  outline: none;
+  height: 25px;
+  border: none;
+  width: 100px;
+  padding: 0px 10px;
+  border-radius: 3px;
+}
+
+.class_title .contain .keywordsearch input::-webkit-input-placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.class_title .contain .keywordsearch input:-ms-input-placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.class_title .contain .keywordsearch input::-ms-input-placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.class_title .contain .keywordsearch input::placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.search_tools {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.search_tools .tool {
+  padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search_tools .tool div {
+  margin: 0px 30px;
+}
+
+.search_tools .tool label {
+  border: 1px solid #0b408e;
+  margin-right: 10px;
+  padding: 8px 30px;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.search_tools .tool input[type="checkbox"] {
+  display: none;
+}
+
+.search_tools .tool input[type="checkbox"]:checked + label {
+  background: #0b408e;
+  color: #fff;
+}
+
+.search_tools .for_kinds {
+  position: relative;
+}
+
+.search_tools .for_kinds select {
+  outline: none;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  border: 1px solid #0b408e;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0px 10px;
+  border-radius: 3px;
+}
+
+.search_tools .for_kinds label {
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #0b408e;
+  top: 47px;
+  left: 160px;
+  pointer-events: none;
+  border-radius: 3px;
+}
+
+.search_tools .for_kinds label:before {
+  display: block;
+  border: 20px solid #eff3f6;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  content: "";
+  -webkit-transform: scale(0.4, 0.6);
+          transform: scale(0.4, 0.6);
+  top: 6px;
+  position: absolute;
+}
+
+.search_tools .for_kinds option {
+  font-size: 20px;
+}
+
+.search_tools .kind_title {
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+.search_tools .remind {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.search_tools .search_hr {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search_tools .search_hr p {
+  display: inline-block;
+  font-size: 28px;
+  color: #333;
+  font-style: italic;
+  background: #fff;
+  padding: 5px 100px;
+}
+
+.search_tools .search_hr hr {
+  margin-top: -25px;
+  border: .5px solid #ccc;
+}
+
+.search_result table {
+  background: #efefef;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  border-collapse: collapse;
+}
+
+.search_result table th {
+  background: #0b408e;
+  height: 50px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.search_result table tr {
+  height: 60px;
+}
+
+.search_result table tr:nth-child(even) {
+  background: #fff;
+}
+
+.search_result table td {
+  padding: 0px 10px;
+}
+
+.search_result table td i {
+  cursor: pointer;
 }

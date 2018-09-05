@@ -42,6 +42,10 @@ li {
   padding: 0;
   margin: 0;
 }
+
+select,option{
+  font-family: "Noto Sans TC";
+}
 //====================選單樣式=====================
 header {
   position: relative;
@@ -110,6 +114,7 @@ header {
   .parent_list {
     width: 1280px;
     margin: auto;
+    overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -124,6 +129,25 @@ header {
       &:hover {
         box-shadow: inset 0px -6px 0px #feb646;
       }
+    }
+    .menu_stu_quick_btn {
+      padding: 0px;
+      background: #ff9b00;
+      text-align: center;
+      margin: 0px;
+      letter-spacing: 2px;
+      border-radius: 3px;
+      transition: all 0.5s;
+      flex: 0;
+      font-size: 0;
+      transform: scale(0);
+    }
+    .show {
+      flex: 1;
+      font-size: initial;
+      margin: 0px 10px;
+      padding: 10px 15px;
+      transform: scale(1);
     }
   }
   .hide {
@@ -325,6 +349,7 @@ header {
 //====================首頁樣式=====================
 .all {
   width: 1280px;
+  min-height: 100vh;
   margin: auto;
 }
 .topSlide {
@@ -429,12 +454,12 @@ header {
   position: relative;
 }
 .zzcc_news {
-  .news_box{
+  .news_box {
     width: 100%;
     overflow: hidden;
     position: relative;
   }
-  .navigate{
+  .navigate {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -442,7 +467,8 @@ header {
     justify-content: space-between;
     width: 100%;
     margin: auto;
-    .prev,.next{
+    .prev,
+    .next {
       cursor: pointer;
       background: rgba(255, 255, 255, 0.7);
       width: 50px;
@@ -450,15 +476,15 @@ header {
       border-radius: 50%;
       text-align: center;
       box-shadow: 0px 1px 2px #333;
-      i{
+      i {
         font-size: 24px;
         line-height: 50px;
       }
     }
-    .prev{
+    .prev {
       margin-left: -20px;
     }
-    .next{
+    .next {
       margin-right: -20px;
     }
   }
@@ -491,31 +517,31 @@ header {
     img {
       width: 100%;
       height: 100%;
-      transition: all .3s;
+      transition: all 0.3s;
     }
     .imgbox {
       width: 100%;
       height: 200px;
       overflow: hidden;
-      &:hover{
-        img{
-          transform: scale(1.1,1.1)
+      &:hover {
+        img {
+          transform: scale(1.1, 1.1);
         }
       }
     }
-    .title{
+    .title {
       display: inline-block;
       font-weight: normal;
       font-size: 18px;
       padding: 5px 0;
       border-bottom: 1px solid #000;
     }
-    p{
+    p {
       padding: 5px 0;
       color: #444;
       font-size: 16px;
     }
-    a{
+    a {
       border: 1px solid #888;
       padding: 0px 5px;
     }
@@ -658,6 +684,161 @@ footer {
       color: #fff;
       margin: 0px 10px;
       font-size: 36px;
+    }
+  }
+}
+//====================class/課程一覽樣式=====================
+.class_title {
+  width: 100%;
+  padding: 20px 0px;
+  color: #fff;
+  background-color: #5f96e8;
+  background-image: url(https://www.transparenttextures.com/patterns/simple-dashed.png);
+  .contain {
+    padding: 0;
+    width: 1280px;
+    margin: auto;
+    position: relative;
+    .keywordsearch {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      input {
+        outline: none;
+        height: 25px;
+        border: none;
+        width: 100px;
+        padding: 0px 10px;
+        border-radius: 3px;
+        &::placeholder {
+          font-family: "Noto Sans TC";
+        }
+      }
+    }
+  }
+}
+.search_tools {
+  padding: 20px;
+  font-size: 18px;
+  .tool {
+    padding: 15px 0;
+    display: flex;
+    div {
+      margin: 0px 30px;
+    }
+    label{
+      border: 1px solid #0b408e;
+      margin-right: 10px;
+      padding: 8px 30px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: all .2s;
+    }
+    input[type="checkbox"]{
+      display: none;
+      &:checked + label{
+        background: #0b408e;
+        color: #fff;
+      }
+    }
+
+  }
+  .for_kinds {
+    position: relative;
+    select {
+      outline: none;
+      width: 200px;
+      height: 40px;
+      position: relative;
+      border: 1px solid #0b408e;
+      appearance: none;
+      padding: 0px 10px;
+      border-radius: 3px;
+    }
+    label {
+      cursor: pointer;
+      padding: 0;
+      margin: 0;
+      border: none;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #0b408e;
+      top: 47px;
+      left: 160px;
+      pointer-events: none;
+      border-radius: 3px;
+      &:before {
+        display: block;
+        border: 20px solid #eff3f6;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        content: "";
+        transform: scale(0.4, 0.6);
+        top: 6px; position: absolute;
+      }
+    }
+    option{
+      font-size: 20px;
+    }
+  }
+  // .for_weeks {
+  // }
+  // .for_time {
+  // }
+  // .for_other {
+  // }
+  .kind_title {
+    padding-bottom: 20px;
+    font-size: 18px;
+  }
+  .remind {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .search_hr{
+    text-align: center;
+    margin: 30px 0;
+    p{
+      display: inline-block;
+      font-size: 28px;
+      color: #333;
+      font-style: italic;
+      background: #fff;
+      padding: 5px 100px;
+    }
+    hr{
+      margin-top: -25px;
+      border: .5px solid #ccc;
+    }
+  }
+}
+.search_result{
+  table{
+    background: #efefef;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    border-collapse:collapse;//摺疊邊框
+    th{
+      background: #0b408e;
+      height: 50px;
+      color: #fff;
+      font-weight: normal;
+    }
+    tr{
+      height: 60px;
+    }
+    tr:nth-child(even) {
+      background: #fff;
+    }
+    td{
+      padding: 0px 10px;
+      i{
+        cursor: pointer;
+      }
     }
   }
 }

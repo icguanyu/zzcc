@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>臺北市中正社區大學</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/style/all.css">
+  <link rel="stylesheet" href="../assets/style/rwd.css">
+</head>
+
+<body>
+  <!--動態載入選單-->
+  <header></header>
+  <div class="menu"></div>
+  <div class="mobile_menu"></div>
+  <!--動態載入選單-->
+  <div class="class_title">
+    <div class="contain">
+      <p>108-1</p>
+      <h1>課程一覽</h1>
+      <div class="keywordsearch">
+        <label for="keyserch">還是找不到課程嗎？試試關鍵字：</label>
+        <input type="text" id="keyserch" name="keyserch" placeholder="課程名稱關鍵字">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </div>
+  <!--首頁內容-->
+  <div class="all">
+    <div class="search_tools">
+      <div class="tool">
+        <div class="for_kinds">
+          <p class="kind_title">課程分類</p>
+          <select name="search_kinds" id="search_kinds">
+            <option value="all">全部</option>
+            <option value="{{kind}}" v-for="kind in filterKinds">{{kind}}</option>
+          </select>
+          <label for="search_kinds"></label>
+        </div>
+        <div class="for_weeks">
+          <p class="kind_title">依星期分類</p>
+          <input type="checkbox" id="search_all" checked="true">
+          <label for="search_all">全部</label>
+          <input type="checkbox" id="search_mon">
+          <label for="search_mon">週一</label>
+          <input type="checkbox" id="search_tue">
+          <label for="search_tue">週二</label>
+          <input type="checkbox" id="search_wen">
+          <label for="search_wen">週三</label>
+          <input type="checkbox" id="search_thu">
+          <label for="search_thu">週四</label>
+          <input type="checkbox" id="search_fir">
+          <label for="search_fir">週五</label>
+        </div>
+      </div>
+      <div class="tool">
+        <div class="for_time">
+          <p class="kind_title">時段選擇</p>
+          <input type="checkbox" id="search_morning">
+          <label for="search_morning">上午</label>
+          <input type="checkbox" id="search_afternoon">
+          <label for="search_afternoon">下午</label>
+          <input type="checkbox" id="search_nigth">
+          <label for="search_nigth">晚上</label>
+        </div>
+        <div class="for_other">
+          <p class="kind_title">進階篩選</p>
+          <input type="checkbox" id="search_new">
+          <label for="search_new">★新課程</label>
+          <input type="checkbox" id="search_half">
+          <label for="search_half">◆核心課程</label>
+          <input type="checkbox" id="search_free">
+          <label for="search_free">●保證金課程</label>
+        </div>
+      </div>
+      <p class="remind">貼心小提醒：可將有興趣的課程加入最愛，點擊右方愛心瀏覽</p>
+
+      <div class="search_hr">
+        <p>搜尋結果：共計328堂課程</p>
+        <hr>
+      </div>
+    </div>
+    <div class="search_result">
+      <table>
+        <tr>
+          <th>星期</th>
+          <th>上課時段</th>
+          <th>課程編號</th>
+          <th>課程名稱</th>
+          <th>講師名稱</th>
+          <th>學分費</th>
+          <th>加入收藏</th>
+        </tr>
+        <tr v-for="item in data">
+          <td>{{item.week}}</td>
+          <td>{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
+          <td>{{item.id}}</td>
+          <td>{{item.class_name}}</td>
+          <td>{{item.teacher}}</td>
+          <td>{{item.fee}}</td>
+          <td><i class="far fa-heart"></i></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!--頁底動態載入footer-->
+  <footer></footer>
+  <!--頁底動態載入footer-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://vuejs.org/js/vue.js'></script>
+  <!--動態載入選單js-->
+  <script src="../assets/js/menu.js"></script>
+  <script src="../assets/js/all.js"></script>
+  <script src="../assets/js/class.js"></script>
+</body>
+
+</html>
