@@ -102,7 +102,7 @@
           <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
           <td class="sta">招生中</td>
           <td class="id">{{item.id}}</td>
-          <td class="class_name">{{item.class_name}}</td>
+          <td class="class_name" @click="showDetail(item.id)">{{item.class_name}}</td>
           <td class="teacher">{{item.teacher}}</td>
           <td class="fee">{{item.fee}}</td>
           <td class="icon">
@@ -118,39 +118,141 @@
       <i class="far fa-heart" v-else></i>
     </div>
     <div class="favorite_box">
-      
-        <div class="search_hr">
-          <p>收藏課程：共計{{favorite.length}}筆</p>
-          <hr>
-        </div>
-        <table>
-          <thead>
-            <tr>
-              <th class="week">星期</th>
-              <th class="period">上課時段</th>
-              <th class="sta">開課狀況</th>
-              <th class="id">課程編號</th>
-              <th class="class_name">課程名稱</th>
-              <th class="teacher">講師名稱</th>
-              <th class="fee">學分費</th>
-              <th class="icon">加入收藏</th>
-            </tr>
-          </thead>
-          <tr v-for="item in favorite">
-            <td class="week">{{item.week}}</td>
-            <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
-            <td class="sta">招生中</td>
-            <td class="id">{{item.id}}</td>
-            <td class="class_name">{{item.class_name}}</td>
-            <td class="teacher">{{item.teacher}}</td>
-            <td class="fee">{{item.fee}}</td>
-            <td class="icon">
-              <i class="fa fa-heart" v-if="item.star" @click="addFavorite(item.id)"></i>
-              <i class="far fa-heart" v-else @click="addFavorite(item.id)"></i>
-            </td>
-          </tr>
-        </table>
+      <div class="search_hr">
+        <p>收藏課程：共計{{favorite.length}}筆</p>
+        <hr>
       </div>
+      <table>
+        <thead>
+          <tr v-if="!favorite.length">
+            <td colspan="8">- 尚未有任何收藏 -</td>
+          </tr>
+          <tr v-if="favorite.length">
+            <th class="week">星期</th>
+            <th class="period">上課時段</th>
+            <th class="sta">開課狀況</th>
+            <th class="id">課程編號</th>
+            <th class="class_name">課程名稱</th>
+            <th class="teacher">講師名稱</th>
+            <th class="fee">學分費</th>
+            <th class="icon">加入收藏</th>
+          </tr>
+        </thead>
+        <tr v-for="item in favorite">
+          <td class="week">{{item.week}}</td>
+          <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
+          <td class="sta">招生中</td>
+          <td class="id">{{item.id}}</td>
+          <td class="class_name" @click="showDetail(item.id)">{{item.class_name}}</td>
+          <td class="teacher">{{item.teacher}}</td>
+          <td class="fee">{{item.fee}}</td>
+          <td class="icon">
+            <i class="fa fa-heart" v-if="item.star" @click="addFavorite(item.id)"></i>
+            <i class="far fa-heart" v-else @click="addFavorite(item.id)"></i>
+          </td>
+        </tr>
+      </table>
+      <div class="favorite_tool">
+        <div class="clear_fav" @click="clearStar">
+          清除收藏<i class="far fa-trash-alt"></i>
+        </div>
+        <div class="back_to_search">
+          返回<i class="far fa-arrow-alt-circle-left"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail_box">
+      <div class="contain">
+        <div class="back" @click="closeDetail"><i class="far fa-times-circle" ></i>
+        </div>
+        <div class="detail_title">
+          <div class="detail_id">VC101</div>
+          <div class="detail_class_name">自然生態輕鬆行</div>
+        </div>
+        <div class="detail_info">
+          <ul>
+            <li class="hl">
+              <p class="item">課程編號：</p>
+              <p class="info">VC101</p>
+            </li>
+            <li>
+              <p class="item">講師姓名：</p>
+              <p class="info">林金松</p>
+            </li>
+            <li>
+              <p class="item">講師學歷：</p>
+              <p class="info">新埔工專</p>
+            </li>
+            <li>
+              <p class="item">講師學歷：</p>
+              <p class="info">電腦公司維護工程師、程式設計師、主管 SUN電腦訓練中心 Java 程式設計系列課程講師 荒野保護協會解說員訓練講師及輔導員 荒野保護協會推廣講師訓練講師 社區大學講師</p>
+            </li>
+            <li class="hl">
+              <p class="item">上課時段：</p>
+              <p class="info">每週一 上午 09:30-12:00</p>
+            </li>
+            <li>
+              <p class="item">課程理念：</p>
+              <p class="info">藉由自然體驗、關懷土地的理念出發，探索人與自然的關係，讓學員能真正地愛好自然， 願意分享在自然中感受到的美好及喜悅， 進而對自然環境的破壞產生疼惜與感觸， 而積極參與守護環境。</p>
+            </li>
+            <li>
+              <p class="item">教學方式：</p>
+              <p class="info">室內課以照片及演說方式，搭配戶外課的實際觀察體驗。室內課在週一上午，戶外課在週一上午或全天。</p>
+            </li>
+            <li>
+              <p class="item">評鑑方式：</p>
+              <p class="info">出席率40%，良善對待環境態度60%</p>
+            </li>
+            <li>
+              <p class="item">參考書目：</p>
+              <p class="info">徐仁修著作系列作品、大樹自然系列書籍</p>
+            </li>
+            <li class="hl">
+              <p class="item">選課要求：</p>
+              <p class="info">能不需旁人協助下參與戶外活動，不需要走很快，也不建議走很快。</p>
+            </li>
+            <li>
+              <p class="item">學分費用：</p>
+              <p class="info">3000元</p>
+            </li>
+            <li>
+              <p class="item">額外費用：</p>
+              <p class="info">戶外課程的各項費用，如: 食宿費、交通費、門票及其它分攤之費用等。交通以共乘或租車為主，若共乘則由乘客補貼開車學員費用。</p>
+            </li>
+            <li>
+              <p class="item">招生人數：</p>
+              <p class="info">22人以上始開班</p>
+            </li>
+            <li>
+              <p class="item">課程大綱：</p>
+              <p class="info hl">※僅供學員參考，實際授課內容視學員需求調整</p>
+            </li>
+          </ul>
+          <table>
+            <thead>
+              <tr>
+                <td>週次</td>
+                <td>主題</td>
+                <td>參考內容</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="info_week">第一週</td>
+                <td class="info_theme">相見歡/生存方法-共生</td>
+                <td class="info_detail">(室內課)1.學員互相認識及選班代2.介紹生物之間各種共生機制</td>
+              </tr>
+              <tr>
+                <td class="info_week">第一週</td>
+                <td class="info_theme">相見歡/生存方法-共生</td>
+                <td class="info_detail">(室內課)1.學員互相認識及選班代2.介紹生物之間各種共生機制</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!--頁底動態載入footer-->

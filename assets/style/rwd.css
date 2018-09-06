@@ -250,6 +250,7 @@
     width: 90%;
     height: auto;
     margin: 10px auto;
+    background: #fff;
     border: 1px solid #ccc;
   }
   table tr:hover {
@@ -319,6 +320,56 @@
   .search_hr p {
     padding: 10px;
     font-size: 16px;
+  }
+  .detail_box .contain {
+    width: 95%;
+    height: 90%;
+    padding: 50px 20px;
+  }
+  .detail_box .contain:hover {
+    -webkit-transform: initial;
+            transform: initial;
+  }
+  .detail_box .contain .back {
+    font-size: 32px;
+    top: 5px;
+    right: 15px;
+  }
+  .detail_box .contain .detail_title {
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .detail_box .contain .detail_info {
+    font-size: 14px;
+  }
+  .detail_box .contain .detail_info ul li .item {
+    margin-right: 5px;
+  }
+  .detail_box .contain .detail_info table thead {
+    display: none;
+  }
+  .detail_box .contain .detail_info table tr {
+    width: 100%;
+    margin: 5px 0;
+    height: auto;
+  }
+  .detail_box .contain .detail_info table tr .info_week {
+    width: 20%;
+    color: #fff;
+    background: #395681;
+  }
+  .detail_box .contain .detail_info table tr .info_theme {
+    width: 80%;
+    color: #fff;
+    background: #395681;
+  }
+  .detail_box .contain .detail_info table tr .info_detail {
+    text-align: left;
+    padding: 5px 10px;
+  }
+  .detail_box .contain .detail_info table td {
+    text-align: center;
+    font-size: 14px;
   }
 }
 
@@ -414,5 +465,28 @@
   }
   footer .backtop {
     display: none;
+  }
+  .favorite_tool {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .favorite_tool div {
+    display: inline-block;
+    width: 80%;
+    margin: 5px 0;
+    padding: 5px 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .favorite_tool div i {
+    font-size: 14px;
   }
 }
