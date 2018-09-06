@@ -81,6 +81,8 @@
     width: 120px;
   }
   .search_tools .tool label {
+    display: inline-block;
+    margin-bottom: 3px;
     padding: 3px 15px;
     font-size: 16px;
   }
@@ -101,6 +103,9 @@
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
+  }
+  .search_tools .tool .for_keyword input {
+    height: 30px;
   }
   .search_result table {
     width: 100%;
@@ -187,22 +192,26 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .search_tools .tool div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .search_tools .tool select {
     font-size: 14px;
   }
   .search_tools .tool label {
     font-size: 14px;
-    margin: 5px 0px;
-    padding: 3px 5px;
-    display: inline-block;
+    margin: 0px 5px 5px 0px;
+    padding: 2px 18px;
   }
   .search_tools .tool .kind_title {
+    width: 100%;
     padding-bottom: 10px;
     font-size: 16px;
     padding-bottom: 5px;
-  }
-  .search_tools .tool .for_kinds {
-    padding-bottom: 3px;
   }
   .search_tools .tool .for_kinds select {
     width: 100%;
@@ -212,13 +221,10 @@
   }
   .search_tools .tool .for_kinds label {
     margin: 0;
+    bottom: 0px;
   }
-  .search_tools .search_hr {
-    margin: 0px 0px 30px 0px;
-  }
-  .search_tools .search_hr p {
-    padding: 10px;
-    font-size: 16px;
+  .search_tools .tool .for_keyword input {
+    font-size: 14px;
   }
   .search_result table {
     background: none;
@@ -283,7 +289,7 @@
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    width: 60%;
+    width: 40%;
     font-size: 12px;
     text-align: left;
   }
@@ -294,11 +300,25 @@
     width: 20%;
     font-size: 12px;
   }
+  .search_result table .sta {
+    font-size: 12px;
+    width: 20%;
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
   .search_result table .fee {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
     display: none;
+  }
+  .search_result .search_hr {
+    margin: 0px 0px 30px 0px;
+  }
+  .search_result .search_hr p {
+    padding: 10px;
+    font-size: 16px;
   }
 }
 

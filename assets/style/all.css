@@ -131,7 +131,7 @@ header .top_info {
 }
 
 .menu {
-  z-index: 100;
+  z-index: 5;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
@@ -466,6 +466,7 @@ header .top_info {
   width: 1280px;
   min-height: 100vh;
   margin: auto;
+  position: relative;
 }
 
 .topSlide {
@@ -908,37 +909,6 @@ footer .container {
   position: relative;
 }
 
-.class_title .contain .keywordsearch {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-}
-
-.class_title .contain .keywordsearch input {
-  outline: none;
-  height: 25px;
-  border: none;
-  width: 100px;
-  padding: 0px 10px;
-  border-radius: 3px;
-}
-
-.class_title .contain .keywordsearch input::-webkit-input-placeholder {
-  font-family: "Noto Sans TC";
-}
-
-.class_title .contain .keywordsearch input:-ms-input-placeholder {
-  font-family: "Noto Sans TC";
-}
-
-.class_title .contain .keywordsearch input::-ms-input-placeholder {
-  font-family: "Noto Sans TC";
-}
-
-.class_title .contain .keywordsearch input::placeholder {
-  font-family: "Noto Sans TC";
-}
-
 .search_tools {
   padding: 20px;
   font-size: 18px;
@@ -952,10 +922,11 @@ footer .container {
 }
 
 .search_tools .tool div {
-  margin: 0px 30px;
+  margin: 0px 20px;
 }
 
 .search_tools .tool label {
+  display: inline-block;
   border: 1px solid #0b408e;
   margin-right: 10px;
   padding: 8px 30px;
@@ -1024,6 +995,33 @@ footer .container {
   font-size: 20px;
 }
 
+.search_tools .for_keyword input {
+  outline: none;
+  height: 40px;
+  border: 1px solid #0b408e;
+  width: 150px;
+  padding: 0px 10px;
+  border-radius: 3px;
+  font-size: 18px;
+  font-family: "Noto Sans TC";
+}
+
+.search_tools .for_keyword input::-webkit-input-placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.search_tools .for_keyword input:-ms-input-placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.search_tools .for_keyword input::-ms-input-placeholder {
+  font-family: "Noto Sans TC";
+}
+
+.search_tools .for_keyword input::placeholder {
+  font-family: "Noto Sans TC";
+}
+
 .search_tools .kind_title {
   padding-bottom: 20px;
   font-size: 18px;
@@ -1034,27 +1032,10 @@ footer .container {
   text-align: center;
 }
 
-.search_tools .search_hr {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.search_tools .search_hr p {
-  display: inline-block;
-  font-size: 28px;
-  color: #333;
-  font-style: italic;
-  background: #fff;
-  padding: 5px 100px;
-}
-
-.search_tools .search_hr hr {
-  margin-top: -25px;
-  border: .5px solid #ccc;
-}
-
 .search_result {
   padding-bottom: 40px;
+  -webkit-transition: all .6s;
+  transition: all .6s;
 }
 
 .search_result table {
@@ -1097,4 +1078,56 @@ footer .container {
 
 .search_result table .class_name {
   cursor: pointer;
+}
+
+.search_result .search_hr {
+  text-align: center;
+  margin: 0px 0px 40px 0;
+}
+
+.search_result .search_hr p {
+  display: inline-block;
+  font-size: 28px;
+  color: #333;
+  font-style: italic;
+  background: #fff;
+  padding: 5px 100px;
+}
+
+.search_result .search_hr hr {
+  margin-top: -25px;
+  border: .5px solid #ccc;
+}
+
+.favorite_icon {
+  position: fixed;
+  padding: 10px;
+  top: 30%;
+  right: 10px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 7px #bebebe;
+          box-shadow: 1px 1px 7px #bebebe;
+  z-index: 50;
+}
+
+.favorite_icon i {
+  font-size: 26px;
+  color: #ff6767;
+  cursor: pointer;
+}
+
+.favorite_icon p {
+  top: calc(100% + 10px);
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  white-space: nowrap;
+  position: absolute;
+}
+
+.favorite_icon p span {
+  -webkit-writing-mode: horizontal-tb;
+      -ms-writing-mode: lr-tb;
+          writing-mode: horizontal-tb;
 }

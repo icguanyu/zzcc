@@ -19,15 +19,11 @@
   <div class="menu"></div>
   <div class="mobile_menu"></div>
   <!--動態載入選單-->
+
   <div class="class_title">
     <div class="contain">
       <p>108-1</p>
       <h1>課程一覽</h1>
-      <div class="keywordsearch">
-        <label for="keyserch">還是找不到課程嗎？試試關鍵字：</label>
-        <input type="text" id="keyserch" name="keyserch" placeholder="課程名稱關鍵字">
-        <i class="fas fa-search"></i>
-      </div>
     </div>
   </div>
   <!--首頁內容-->
@@ -37,78 +33,92 @@
         <div class="for_kinds">
           <p class="kind_title">課程分類</p>
           <label for="search_kinds"></label>
-          <select name="search_kinds" id="search_kinds" v-model='filter'>
+          <select name="search_kinds" id="search_kinds" v-model='filter_kinds'>
             <option value="all">全部</option>
             <option :value="kind" v-for="kind in filterKinds">{{kind}}</option>
           </select>
+        </div>
 
+        <div class="for_keyword">
+          <p class="kind_title">關鍵字</p>
+          <input type="text" id="keyserch" name="keyserch" placeholder="課程名稱關鍵字" v-model="filter_keyword">
         </div>
         <div class="for_weeks">
           <p class="kind_title">依星期分類</p>
-          <input type="checkbox" id="search_all" checked="true">
-          <label for="search_all">全部</label>
-          <input type="checkbox" id="search_mon">
+          <input type="checkbox" id="search_mon" value="一" v-model="filter_weeks">
           <label for="search_mon">週一</label>
-          <input type="checkbox" id="search_tue">
+          <input type="checkbox" id="search_tue" value="二" v-model="filter_weeks">
           <label for="search_tue">週二</label>
-          <input type="checkbox" id="search_wen">
+          <input type="checkbox" id="search_wen" value="三" v-model="filter_weeks">
           <label for="search_wen">週三</label>
-          <input type="checkbox" id="search_thu">
+          <input type="checkbox" id="search_thu" value="四" v-model="filter_weeks">
           <label for="search_thu">週四</label>
-          <input type="checkbox" id="search_fir">
+          <input type="checkbox" id="search_fir" value="五" v-model="filter_weeks">
           <label for="search_fir">週五</label>
         </div>
       </div>
       <div class="tool">
         <div class="for_time">
           <p class="kind_title">時段選擇</p>
-          <input type="checkbox" id="search_morning">
+          <input type="checkbox" id="search_morning" value="上" v-model="filter_period">
           <label for="search_morning">上午</label>
-          <input type="checkbox" id="search_afternoon">
+          <input type="checkbox" id="search_afternoon" value="下" v-model="filter_period">
           <label for="search_afternoon">下午</label>
-          <input type="checkbox" id="search_nigth">
+          <input type="checkbox" id="search_nigth" value="晚" v-model="filter_period">
           <label for="search_nigth">晚上</label>
         </div>
         <div class="for_other">
           <p class="kind_title">進階篩選</p>
-          <input type="checkbox" id="search_new">
+          <input type="checkbox" id="search_new" value="★" v-model="filter_other">
           <label for="search_new">★新課程</label>
-          <input type="checkbox" id="search_half">
+          <input type="checkbox" id="search_half" value="◆" v-model="filter_other">
           <label for="search_half">◆核心課程</label>
-          <input type="checkbox" id="search_free">
+          <input type="checkbox" id="search_free" value="●" v-model="filter_other">
           <label for="search_free">●保證金課程</label>
         </div>
       </div>
       <p class="remind">貼心小提醒：可將有興趣的課程加入最愛，點擊右方愛心瀏覽</p>
-
+    </div>
+    <div class="search_result">
       <div class="search_hr">
         <p>搜尋結果：共計{{filterClass.length}}堂課程</p>
         <hr>
       </div>
-    </div>
-    <div class="search_result">
       <table>
         <thead>
           <tr>
-            <th>星期</th>
-            <th>上課時段</th>
-            <th>課程編號</th>
-            <th>課程名稱</th>
-            <th>講師名稱</th>
-            <th>學分費</th>
-            <th>加入收藏</th>
+            <th class="week">星期</th>
+            <th class="period">上課時段</th>
+            <th class="sta">開課狀況</th>
+            <th class="id">課程編號</th>
+            <th class="class_name">課程名稱</th>
+            <th class="teacher">講師名稱</th>
+            <th class="fee">學分費</th>
+            <th class="icon">加入收藏</th>
           </tr>
         </thead>
         <tr v-for="item in filterClass">
           <td class="week">{{item.week}}</td>
           <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
+          <td class="sta">招生中</td>
           <td class="id">{{item.id}}</td>
           <td class="class_name">{{item.class_name}}</td>
           <td class="teacher">{{item.teacher}}</td>
           <td class="fee">{{item.fee}}</td>
-          <td class="icon"><i class="far fa-heart"></i></td>
+          <td class="icon">
+            <i class="fa fa-heart" v-if="item.star" @click="addFavorite(item.id)"></i>
+            <i class="far fa-heart" v-else @click="addFavorite(item.id)"></i>
+          </td>
         </tr>
       </table>
+    </div>
+    <div class="favorite_icon">
+      <p>已收藏<span>{{favorite.length}}</span>筆</p>
+      <i class="fas fa-heart" v-if="favorite.length"></i>
+      <i class="far fa-heart" v-else></i>
+    </div>
+    <div class="favorite_box">
+      
     </div>
   </div>
 
