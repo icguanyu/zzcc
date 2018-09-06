@@ -958,7 +958,7 @@ footer .container {
   width: 200px;
   height: 40px;
   position: relative;
-  border: 1px solid #0b408e;
+  border: 0.5px solid #144e8c;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1001,7 +1001,7 @@ footer .container {
 .search_tools .for_keyword input {
   outline: none;
   height: 40px;
-  border: 1px solid #0b408e;
+  border: 0.5px solid #144e8c;
   width: 150px;
   padding: 0px 10px;
   border-radius: 3px;
@@ -1134,7 +1134,7 @@ table .far {
           writing-mode: vertical-lr;
   white-space: nowrap;
   position: absolute;
-  background: #fff;
+  text-shadow: 0px 0px 15px #fff;
   padding: 5px 0;
   border-radius: 10px;
 }
@@ -1318,6 +1318,10 @@ table .far {
 
 .detail_box .contain .detail_info table tr:hover {
   background: initial;
+}
+
+.hide_scroll {
+  overflow: hidden;
 }
 
 .show_detail {

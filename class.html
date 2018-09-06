@@ -124,9 +124,6 @@
       </div>
       <table>
         <thead>
-          <tr v-if="!favorite.length">
-            <td colspan="8">- 尚未有任何收藏 -</td>
-          </tr>
           <tr v-if="favorite.length">
             <th class="week">星期</th>
             <th class="period">上課時段</th>
@@ -138,6 +135,9 @@
             <th class="icon">加入收藏</th>
           </tr>
         </thead>
+        <tr v-if="!favorite.length">
+          <td colspan="8">- 尚未有任何收藏 -</td>
+        </tr>
         <tr v-for="item in favorite">
           <td class="week">{{item.week}}</td>
           <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
@@ -164,7 +164,7 @@
 
     <div class="detail_box">
       <div class="contain">
-        <div class="back" @click="closeDetail"><i class="far fa-times-circle" ></i>
+        <div class="back" @click="closeDetail"><i class="far fa-times-circle"></i>
         </div>
         <div class="detail_title">
           <div class="detail_id">VC101</div>

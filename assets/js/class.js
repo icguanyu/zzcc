@@ -35,11 +35,13 @@
           }
         })
       },
-      showDetail: function(id){ 
+      showDetail: function(id){
+        $('body').addClass('hide_scroll') 
         $('.detail_box').addClass('show_detail')
         console.log(id)
       },
       closeDetail: function(e){
+        $('body').removeClass('hide_scroll') 
         $('.detail_box').removeClass('show_detail')
       },
       addFavorite: function(id){
