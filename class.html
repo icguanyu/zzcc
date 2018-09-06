@@ -119,7 +119,38 @@
     </div>
     <div class="favorite_box">
       
-    </div>
+        <div class="search_hr">
+          <p>收藏課程：共計{{favorite.length}}筆</p>
+          <hr>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th class="week">星期</th>
+              <th class="period">上課時段</th>
+              <th class="sta">開課狀況</th>
+              <th class="id">課程編號</th>
+              <th class="class_name">課程名稱</th>
+              <th class="teacher">講師名稱</th>
+              <th class="fee">學分費</th>
+              <th class="icon">加入收藏</th>
+            </tr>
+          </thead>
+          <tr v-for="item in favorite">
+            <td class="week">{{item.week}}</td>
+            <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
+            <td class="sta">招生中</td>
+            <td class="id">{{item.id}}</td>
+            <td class="class_name">{{item.class_name}}</td>
+            <td class="teacher">{{item.teacher}}</td>
+            <td class="fee">{{item.fee}}</td>
+            <td class="icon">
+              <i class="fa fa-heart" v-if="item.star" @click="addFavorite(item.id)"></i>
+              <i class="far fa-heart" v-else @click="addFavorite(item.id)"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
   </div>
 
   <!--頁底動態載入footer-->

@@ -226,18 +226,18 @@
   .search_tools .tool .for_keyword input {
     font-size: 14px;
   }
-  .search_result table {
+  table {
     background: none;
   }
-  .search_result table thead {
+  table thead {
     display: none;
   }
-  .search_result table td {
+  table td {
     padding: 0;
     font-size: 16px;
     padding: 5px 0;
   }
-  .search_result table tr {
+  table tr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -252,17 +252,17 @@
     margin: 10px auto;
     border: 1px solid #ccc;
   }
-  .search_result table tr:hover {
+  table tr:hover {
     background: none;
   }
-  .search_result table .id {
+  table .id {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
     width: 20%;
     background: #eee;
   }
-  .search_result table .class_name {
+  table .class_name {
     width: 60%;
     display: block;
     text-align: left;
@@ -271,21 +271,21 @@
             order: 1;
     background: #eee;
   }
-  .search_result table .icon {
+  table .icon {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
     width: 20%;
     background: #eee;
   }
-  .search_result table .week {
+  table .week {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
     width: 20%;
     font-size: 12px;
   }
-  .search_result table .period {
+  table .period {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
@@ -293,30 +293,30 @@
     font-size: 12px;
     text-align: left;
   }
-  .search_result table .teacher {
+  table .teacher {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
     width: 20%;
     font-size: 12px;
   }
-  .search_result table .sta {
+  table .sta {
     font-size: 12px;
     width: 20%;
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
             order: 6;
   }
-  .search_result table .fee {
+  table .fee {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
     display: none;
   }
-  .search_result .search_hr {
+  .search_hr {
     margin: 0px 0px 30px 0px;
   }
-  .search_result .search_hr p {
+  .search_hr p {
     padding: 10px;
     font-size: 16px;
   }

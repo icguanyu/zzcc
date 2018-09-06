@@ -89,7 +89,9 @@ var app = new Vue({
   }
 })
 
-// $('.favorite_icon').click(function(){
-//   $('.search_result').toggleClass('hide_result')
-//   $('.favorite_box').delay(600).toggleClass('show_favorite')
-// })
+$('.favorite_icon').click(function(){
+  $("html,body").scrollTop(0)
+  
+  $('.search_result , .search_tools').toggleClass('hide_result')
+  $('.favorite_box').toggleClass('show_favorite')
+})
