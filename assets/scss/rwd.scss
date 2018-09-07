@@ -276,6 +276,11 @@
       text-align: left;
       order: 1;
       background: #eee;
+      label{
+        &:after{
+          display: none;
+        }
+      }
     }
 
     .icon {

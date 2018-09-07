@@ -3,13 +3,14 @@
     el: '.all',
     data: {
       data :[],
+      nowclass: 'VC101',
       filter_keyword: '',
       filter_kinds: 'all',
       filter_weeks: [],
       filter_period: [],
       filter_other: [],
       filter_favorite: false,
-      storageArray: []
+      storageArray: [],
     },
     created() {
       const vm = this
@@ -25,7 +26,7 @@
           if(res){
             res.forEach(item=>item['star'] = false)//加星星
             vm.data = res
-            if(!vm.storageArray) return
+            if(!vm.storageArray) return //load星星
             vm.storageArray.forEach((val)=>{
               const hasStar = vm.data.find(item=>item.id===val)
               hasStar['star'] = true
@@ -36,6 +37,7 @@
         })
       },
       showDetail: function(id){
+        const vm = this
         $('body').addClass('hide_scroll') 
         $('.detail_box').addClass('show_detail')
         console.log(id)
@@ -101,6 +103,21 @@
         const vm = this
         const result = vm.data.filter((item)=>item.star)
         return result
+      },
+      nowClass(){
+        const vm = this
+        return vm.data.filter(item => item.id === vm.nowclass)
+      },
+      schedule(){//當下所選課程之課表
+        const vm = this
+        const target = vm.data.find((item)=>item.id==vm.nowclass)
+        let temp = []
+        for(i=1;i<19;i++) temp.push({
+          'w' : `第${i}週`,
+          'theme': target[`w${i}`],
+          'intro': target[`w${i}_intro`]
+        })
+        return temp
       }
     }
   })

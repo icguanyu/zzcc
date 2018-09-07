@@ -272,6 +272,9 @@
             order: 1;
     background: #eee;
   }
+  table .class_name label:after {
+    display: none;
+  }
   table .icon {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
