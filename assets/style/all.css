@@ -82,8 +82,9 @@ header .top_info {
   display: none;
   cursor: pointer;
   position: fixed;
+  z-index: 1;
   right: 10px;
-  bottom: 10px;
+  bottom: 50px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -258,7 +259,7 @@ header .top_info {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 20px 10px;
+  padding: 35px 10px;
   border: none;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -958,6 +959,7 @@ footer .container {
 
 .search_tools .tool label {
   display: inline-block;
+  background: #fff;
   border: 0.5px solid #144e8c;
   margin-right: 10px;
   padding: 8px 30px;
@@ -1035,6 +1037,8 @@ footer .container {
   border-radius: 3px;
   font-size: 18px;
   font-family: "Noto Sans TC";
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .search_tools .for_keyword input::-webkit-input-placeholder {
