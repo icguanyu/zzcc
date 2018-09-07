@@ -115,11 +115,6 @@
         </tr>
       </table>
     </div>
-    <div class="favorite_icon">
-      <p>已收藏<span>{{favorite.length}}</span>筆</p>
-      <i class="fas fa-heart" v-if="favorite.length"></i>
-      <i class="far fa-heart" v-else></i>
-    </div>
     <div class="favorite_box">
       <div class="search_hr">
         <p>收藏課程：共計{{favorite.length}}筆</p>
@@ -167,7 +162,6 @@
         </div>
       </div>
     </div>
-
     <div class="detail_box">
       <div class="contain" v-for="detail in nowClass">
         <div class="back" @click="closeDetail"><i class="far fa-times-circle"></i>
@@ -254,7 +248,14 @@
         </div>
       </div>
     </div>
+    <div class="favorite_icon">
+      <p>已收藏<span>{{favorite.length}}</span>筆</p>
+      <i class="fas fa-heart" v-if="favorite.length"></i>
+      <i class="far fa-heart" v-else></i>
+    </div>
   </div>
+
+  <div class="backTop"></div>
 
   <!--頁底動態載入footer-->
   <footer></footer>

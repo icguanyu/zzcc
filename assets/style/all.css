@@ -78,6 +78,34 @@ header .top_info {
           align-items: center;
 }
 
+.backTop {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 5px #888;
+          box-shadow: 0px 0px 5px #888;
+}
+
+.backTop::after {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 13px;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #aaa;
+  border-left: 3px solid #aaa;
+  z-index: 1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
 .hamburgur {
   cursor: pointer;
   padding: 20px 20px;
@@ -1286,6 +1314,9 @@ table .far {
   font-size: 36px;
   font-weight: 100;
   letter-spacing: 2px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .detail_box .contain .detail_title .detail_id {

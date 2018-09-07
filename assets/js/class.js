@@ -38,7 +38,8 @@
       },
       showDetail: function(id){
         const vm = this
-        $('body').addClass('hide_scroll') 
+        $('body').addClass('hide_scroll')
+        $(".detail_info").scrollTop(0)
         $('.detail_box').addClass('show_detail')
         console.log(id)
       },
@@ -121,13 +122,26 @@
       }
     }
   })
+  
 
+
+
+  //我的最愛切換
   function toggleResult(){
     $("html,body").scrollTop(0)
     $('.search_result , .search_tools').toggleClass('hide_result')
     $('.favorite_box').toggleClass('show_favorite')
   }
-
   $('.favorite_icon').click(toggleResult)
   $('.back_to_search').click(toggleResult)
+
+  //回頂端
+  const $backTOp = $('.backTop')
+  $backTOp.click(function(){
+    $("html,body").animate({scrollTop:0})
+  })
+  $(window).scroll(function(){
+    var scrollY = $(this).scrollTop()
+    scrollY>300?$backTOp.fadeIn():$backTOp.fadeOut()
+  })
 })()
