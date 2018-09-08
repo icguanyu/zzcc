@@ -1141,6 +1141,42 @@ table .far {
   color: #999;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination span {
+  cursor: pointer;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0px 1px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+  background: #acbbcc;
+  border-right: 1px solid #ECEEEF;
+}
+
+.pagination .current {
+  background: #2d4662;
+}
+
+.pagination .mobile_pages {
+  display: none;
+}
+
 .search_hr {
   text-align: center;
   margin: 0px 0px 40px 0;

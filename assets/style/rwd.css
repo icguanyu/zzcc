@@ -380,6 +380,22 @@
     text-align: center;
     font-size: 14px;
   }
+  .pagination {
+    color: #666;
+    font-size: 18px;
+  }
+  .pagination .page {
+    display: none;
+  }
+  .pagination .mobile_pages {
+    display: block;
+    letter-spacing: 6px;
+  }
+  .pagination .next, .pagination .pre {
+    background: none;
+    color: #666;
+    margin: 0px 20px;
+  }
 }
 
 @media screen and (max-width: 468px) {

@@ -80,11 +80,11 @@
     </div>
     <div class="search_result">
       <div class="search_hr">
-        <p v-if="filterClass.length==0">資料載入中... <i class="fas fa-spinner fa-pulse"></i></p>
-        <p v-else>搜尋結果：共計{{filterClass.length}}堂課程</p>
+        <p v-if="filterClass.length==0">找不到課程... <i class="fas fa-spinner fa-pulse"></i></p>
+        <p v-else>搜尋結果：第{{current_page}}頁，共計{{pagination.total_page}}頁，{{filterClass.length}}堂課程</p>
         <hr>
       </div>
-      <table>
+      <table class="result_table">
         <thead>
           <tr>
             <th class="week">星期</th>
@@ -97,7 +97,7 @@
             <th class="icon">加入收藏</th>
           </tr>
         </thead>
-        <tr v-for="item in filterClass">
+        <tr v-for="item in filterClass.slice(pagination.page_star,pagination.page_end)">
           <td class="week">{{item.week}}</td>
           <td class="period">{{item.period}}{{item.time_start}}-{{item.time_end}}</td>
           <td class="sta">招生中</td>
@@ -114,6 +114,21 @@
           </td>
         </tr>
       </table>
+      <div class="pagination">
+        <div @click="pageHandler">
+          <span class="pre"><</span>
+        </div>
+        <div class="page">
+          <span 
+            v-for="page in pagination.total_page"
+            @click="pageHandler(page)">{{page}}
+          </span>
+        </div>
+        <p class="mobile_pages">{{current_page}}/{{pagination.total_page}}</p>
+        <div @click="pageHandler">
+          <span class="next">></span>
+        </div>
+      </div>
     </div>
     <div class="favorite_box">
       <div class="search_hr">

@@ -386,6 +386,22 @@
       }
     }
   }
+  .pagination{
+    color: #666;
+    font-size: 18px;
+    .page{
+      display: none;
+    }
+    .mobile_pages{
+      display: block;
+      letter-spacing: 6px;
+    }
+    .next,.pre{
+      background: none;
+      color: #666;
+      margin: 0px 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 468px) {

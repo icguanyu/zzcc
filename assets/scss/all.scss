@@ -893,6 +893,32 @@ table{
     color: #999;
   }
 }
+.pagination{
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: center;
+  span{
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0px 1px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    background: #acbbcc;
+    border-right: 1px solid #ECEEEF;
+  }
+  .current{
+    background: #2d4662;
+  }
+  .mobile_pages{
+    display: none;
+  }
+}
 .search_hr{
   text-align: center;
   margin: 0px 0px 40px 0;

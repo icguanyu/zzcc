@@ -11,6 +11,8 @@
       filter_other: [],
       filter_favorite: false,
       storageArray: [],
+      current_page: 1,
+      per_page:20,//每頁10則
     },
     created() {
       const vm = this
@@ -60,6 +62,19 @@
           item.star = false
         })
         localStorage.clear()
+      },
+      pageHandler(key){
+        const vm = this
+        if(typeof(key)==='number'){
+          vm.current_page = key
+        }else{
+          if(key.target.className==="pre"){
+            vm.current_page > 1 && vm.current_page --
+          }else if(key.target.className=="next"){
+            vm.current_page < vm.pagination.total_page && vm.current_page ++
+          }
+        }
+        $('.page span').eq(vm.current_page-1).addClass('current').siblings().removeClass()
       }
     },
     computed:{
@@ -70,6 +85,7 @@
       },
       filterClass(){
         const vm = this
+        vm.current_page = 1 //要過濾前返回第一頁
         //過濾條件
         const weekReg = new RegExp(
           this.filter_weeks.length !==0 ? `[${this.filter_weeks.join('')}@]` : `[一二三四五@]`,'gi'
@@ -118,6 +134,21 @@
           'theme': target[`w${i}`],
           'intro': target[`w${i}_intro`]
         })
+        return temp
+      },
+      pagination(){
+        const vm = this
+        const temp = {
+          'current_page': vm.current_page,
+          'per_page': vm.per_page+1,//
+          'page_star' : (vm.current_page-1)*vm.per_page,
+          'page_end': vm.current_page*vm.per_page,
+          'total_page': Math.ceil(vm.filterClass.length/vm.per_page),
+          'has_next': vm.current_page == Math.ceil(vm.filterClass.length/vm.per_page) 
+              ? false
+              : true,
+          'has_prev': vm.current_page == 1 ? false : true,
+        }
         return temp
       }
     }
