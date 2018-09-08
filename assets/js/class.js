@@ -3,7 +3,7 @@
     el: '.all',
     data: {
       data :[],
-      nowclass: 'VC101',
+      nowclass: '',
       filter_keyword: '',
       filter_kinds: 'all',
       filter_weeks: [],
@@ -11,7 +11,7 @@
       filter_other: [],
       filter_favorite: false,
       storageArray: [],
-      current_page: 1,
+      current_page: '',
       per_page:20,//每頁10則
     },
     created() {
@@ -74,6 +74,8 @@
             vm.current_page < vm.pagination.total_page && vm.current_page ++
           }
         }
+        const back = $('.search_result').offset().top - $('header').outerHeight()
+        $('body,html').animate({scrollTop:back},400)
         $('.page span').eq(vm.current_page-1).addClass('current').siblings().removeClass()
       }
     },
@@ -86,6 +88,7 @@
       filterClass(){
         const vm = this
         vm.current_page = 1 //要過濾前返回第一頁
+        $('.page span').eq(0).addClass('current').siblings().removeClass()//要過濾前返回第一頁
         //過濾條件
         const weekReg = new RegExp(
           this.filter_weeks.length !==0 ? `[${this.filter_weeks.join('')}@]` : `[一二三四五@]`,'gi'
@@ -169,10 +172,15 @@
   //回頂端
   const $backTOp = $('.backTop')
   $backTOp.click(function(){
-    $("html,body").animate({scrollTop:0})
+    $("html,body").animate({scrollTop:0},600)
   })
   $(window).scroll(function(){
     var scrollY = $(this).scrollTop()
     scrollY>300?$backTOp.fadeIn():$backTOp.fadeOut()
   })
+  //預設第一個按鈕先加上class
+  setTimeout(function(){
+    $('.page span').eq(0).addClass('current')
+  },1000)
+  
 })()
