@@ -161,9 +161,6 @@
     padding: 5px 0;
     font-size: 14px;
   }
-  .zzcc_news .block {
-    width: 330px;
-  }
   .news_title p {
     font-size: 12px;
   }
@@ -470,15 +467,8 @@
     padding: 10px;
   }
   .zzcc_news .news_box {
-    overflow: auto;
     height: auto;
     padding: 0;
-  }
-  .zzcc_news .navigate {
-    display: none;
-  }
-  .zzcc_news .block {
-    width: 280px;
   }
   .other_news li {
     display: block;
