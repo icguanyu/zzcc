@@ -23,7 +23,7 @@
     methods:{
       getData: function(){
         const vm = this
-        const apiUrl ='assets/js/data.json'  
+        const apiUrl ='../data/data.json'  
         $.get(apiUrl).then(res=>{
           if(res){
             res.forEach(item=>item['star'] = false)//加星星
@@ -43,7 +43,7 @@
         $('body').addClass('hide_scroll')
         $(".detail_info").scrollTop(0)
         $('.detail_box').addClass('show_detail')
-        console.log(id)
+        //console.log(id)
       },
       closeDetail: function(e){
         $('body').removeClass('hide_scroll') 

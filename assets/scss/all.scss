@@ -733,11 +733,11 @@ footer {
   }
 }
 .search_tools {
-  padding: 20px;
+  padding: 20px 0px;
   font-size: 18px;
   transition: all .6s;
   .tool {
-    padding: 15px 0;
+    padding: 5px 0;
     display: flex;
     div {
       margin: 0px 20px;
@@ -826,7 +826,7 @@ footer {
   // .for_other {
   // }
   .kind_title {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     font-size: 18px;
   }
   .remind {
@@ -902,6 +902,10 @@ table{
   margin-top: 30px;
   align-items: center;
   justify-content: center;
+  .next,.pre{
+    background: none;
+    color: #333;
+  }
   span{
     cursor: pointer;
     font-size: 16px;
@@ -910,7 +914,7 @@ table{
     width: 30px;
     height: 30px;
     line-height: 30px;
-    border-radius: 4px;
+    border-radius: 2px;
     text-align: center;
     color: #fff;
     background: #acbbcc;

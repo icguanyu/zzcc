@@ -170,6 +170,19 @@
   .show_all_news {
     display: none;
   }
+  footer .copyright .copyright_inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  footer .copyright .copyright_inner div {
+    margin: 5px 0;
+  }
+  footer .copyright .copyright_inner i {
+    font-size: 24px;
+  }
   /*class課程總覽*/
   .class_title {
     padding: 10px 0;
@@ -476,22 +489,6 @@
     text-align: left;
   }
   .other_news li .info .class {
-    display: none;
-  }
-  footer .copyright .copyright_inner {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-  }
-  footer .copyright .copyright_inner div {
-    margin: 5px 0;
-  }
-  footer .copyright .copyright_inner i {
-    font-size: 24px;
-  }
-  footer .backtop {
     display: none;
   }
   .favorite_tool {
