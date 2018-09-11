@@ -34,7 +34,7 @@
           <p class="kind_title">課程分類</p>
           <label for="search_kinds"></label>
           <select name="search_kinds" id="search_kinds" v-model='filter_kinds'>
-            <option value="all">全部</option>
+            <option value="">全部</option>
             <option :value="kind" v-for="kind in filterKinds">{{kind}}</option>
           </select>
         </div>

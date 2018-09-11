@@ -5,7 +5,7 @@
       data :[],
       nowclass: '',
       filter_keyword: '',
-      filter_kinds: 'all',
+      filter_kinds: '',
       filter_weeks: [],
       filter_period: [],
       filter_other: [],
@@ -89,28 +89,23 @@
         const vm = this
         vm.current_page = 1 //要過濾前返回第一頁
         $('.page span').eq(0).addClass('current').siblings().removeClass()//要過濾前返回第一頁
-        //過濾條件
+        //四個條件:種類/星期/時段/特殊
+        const kindReg = new RegExp(
+          this.filter_kinds ? `^${this.filter_kinds}` : `.*`,'gi'
+        )
         const weekReg = new RegExp(
-          this.filter_weeks.length !==0 ? `[${this.filter_weeks.join('')}@]` : `[一二三四五@]`,'gi'
+          this.filter_weeks.length !==0 ? `[${this.filter_weeks.join('')}@]` : `.*`,'gi'
         )
         const periodReg = new RegExp(
-          this.filter_period.length !==0 ? `[${this.filter_period.join('')}@]` : `[上下晚@]`
-          ,'gi'
+          this.filter_period.length !==0 ? `[${this.filter_period.join('')}@]` : `.*`,'gi'
         )
         const otherReg = new RegExp(
-          this.filter_other.length !==0 ? `[${this.filter_other.join('')}@]` : `.*`
-          ,'gi'
+          this.filter_other.length !==0 ? `[${this.filter_other.join('')}@]` : `.*`,'gi'
         )
+        //過濾
         const result = vm.data.filter((item)=>{
           return (
-            vm.filter_kinds === 'all' 
-            ? 
-            item.week.match(weekReg) &&
-            item.period.split('')[0].match(periodReg) &&
-            item.class_name.match(otherReg) &&
-            item.class_name.match(this.filter_keyword)
-            :
-            item.kinds_1 === vm.filter_kinds &&
+            item.kinds_1.match(kindReg)&&
             item.week.match(weekReg) && 
             item.period.split('')[0].match(periodReg) &&
             item.class_name.match(otherReg) &&
